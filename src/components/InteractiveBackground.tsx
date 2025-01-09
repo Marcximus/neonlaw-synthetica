@@ -51,7 +51,7 @@ export const InteractiveBackground = () => {
   return (
     <P5Wrapper
       sketch={sketch}
-      className="fixed inset-0 -z-10 pointer-events-none"
+      className="fixed inset-0 -z-10 pointer-events-none opacity-50"
     />
   );
 };
