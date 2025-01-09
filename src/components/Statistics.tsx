@@ -17,8 +17,17 @@ const AnimatedValue = ({ value }: { value: string }) => {
 
   return (
     <motion.span className="gradient-text">
-      {rounded.get()}
-      {value.includes("+") ? "+" : value.includes("%") ? "%" : ""}
+      {value.includes("+") ? (
+        <>
+          <motion.span>{rounded}</motion.span>+
+        </>
+      ) : value.includes("%") ? (
+        <>
+          <motion.span>{rounded}</motion.span>%
+        </>
+      ) : (
+        <motion.span>{rounded}</motion.span>
+      )}
     </motion.span>
   );
 };
