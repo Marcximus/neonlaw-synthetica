@@ -30,10 +30,10 @@ export const About = () => {
 
           <div className="glass p-6 sm:p-8 rounded-xl space-y-6">
             <p className="text-gray-300 leading-relaxed">
-              Som specialiseret M&A- og startup-advokat har jeg dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel erhvervsjura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener.
+              Som advokat med fokus på M&A og startups hjælper jeg virksomheder med at navigere gennem juridiske udfordringer. Min erfaring omfatter både traditionel erhvervsjura og moderne teknologiret.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              Min tilgang er præget af en konstant stræben efter at være på forkant med udviklingen, særligt inden for AI og blockchain. Dette gør mig i stand til at yde rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på morgendagens muligheder.
+              Jeg holder mig opdateret med den nyeste udvikling inden for AI og blockchain for at kunne give den bedste rådgivning til fremtidsorienterede virksomheder.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
               <div className="glass p-4 rounded-lg">
@@ -48,10 +48,10 @@ export const About = () => {
               <div className="glass p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-2 text-cyberpunk-blue">Værdier</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Innovation & Fremsynethed</li>
-                  <li>• Tilgængelighed 24/7</li>
-                  <li>• Transparent Prissætning</li>
-                  <li>• Teknologisk Indsigt</li>
+                  <li>• Innovation & Udvikling</li>
+                  <li>• Hurtig Responstid</li>
+                  <li>• Klar Prissætning</li>
+                  <li>• Digital Ekspertise</li>
                 </ul>
               </div>
             </div>
