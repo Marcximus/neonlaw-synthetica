@@ -37,7 +37,7 @@ export const About = () => {
             <p className="text-gray-300 leading-relaxed">
               Min tilgang er præget af en konstant stræben efter at være på forkant med udviklingen, særligt inden for AI og blockchain. Dette gør mig i stand til at yde rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på morgendagens muligheder.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
               <div className="glass p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
                 <ul className="space-y-2 text-gray-300">
@@ -54,6 +54,14 @@ export const About = () => {
                   <li>• Tilgængelighed 24/7</li>
                   <li>• Transparent Prissætning</li>
                   <li>• Teknologisk Indsigt</li>
+                </ul>
+              </div>
+              <div className="glass p-4 rounded-lg">
+                <h3 className="text-xl font-bold mb-2 text-cyberpunk-pink">CV</h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Advokat fra Accura</li>
+                  <li>• Officer i Hæren</li>
+                  <li>• Københavns Universitet</li>
                 </ul>
               </div>
             </div>
