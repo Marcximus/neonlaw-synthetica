@@ -14,7 +14,7 @@ export const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/lovable-uploads/rocket.mp4" type="video/mp4" />
+          <source src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/videos/rocket.mp4" type="video/mp4" />
         </video>
       </div>
       
