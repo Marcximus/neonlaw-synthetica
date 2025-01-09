@@ -41,7 +41,7 @@ export const About = () => {
               <div className="glass p-4 rounded-lg">
                 <h3 className="text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• M&A og Virksomhedsoverdragelser</li>
+                  <li>• M&A og Erhvervsret</li>
                   <li>• Startup Rådgivning</li>
                   <li>• Tech & AI Jura</li>
                   <li>• Venture Capital</li>
