@@ -7,13 +7,17 @@ import { Testimonials } from "../components/Testimonials";
 import { Process } from "../components/Process";
 import { Industries } from "../components/Industries";
 import { Navbar } from "../components/Navbar";
+import { InteractiveBackground } from "../components/InteractiveBackground";
+import { DataVisualization } from "../components/DataVisualization";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <InteractiveBackground />
       <Hero />
       <Services />
       <Statistics />
+      <DataVisualization />
       <Process />
       <Industries />
       <Testimonials />
