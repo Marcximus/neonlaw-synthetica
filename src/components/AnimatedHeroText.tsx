@@ -22,9 +22,9 @@ export const AnimatedHeroText = () => {
       
       p.preload = () => {
         try {
-          // Load the font from the public directory
-          font = p.loadFont('/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
-            () => {
+          p.loadFont('/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
+            (loadedFont) => {
+              font = loadedFont;
               fontLoaded = true;
               setIsLoading(false);
             },
@@ -41,36 +41,34 @@ export const AnimatedHeroText = () => {
 
       p.setup = () => {
         p.createCanvas(p.windowWidth, 200);
-        if (!fontLoaded) {
-          // If font failed to load, use default font
-          p.textSize(48);
-          p.textAlign(p.CENTER, p.CENTER);
-          return;
-        }
         
-        p.textFont(font);
+        // Set default text properties regardless of font loading
         p.textSize(48);
         p.textAlign(p.CENTER, p.CENTER);
         
-        // Create particles from text points
-        const points = font.textToPoints('Jura', p.width / 2 - 60, 100, 48, {
-          sampleFactor: 0.1
-        });
-        
-        points.forEach(point => {
-          particles.push({
-            pos: p.createVector(point.x, point.y),
-            vel: p.createVector(p.random(-1, 1), p.random(-1, 1)),
-            size: p.random(2, 4),
-            color: colors[Math.floor(p.random(0, colors.length))]
+        if (fontLoaded && font) {
+          p.textFont(font);
+          
+          // Create particles from text points
+          const points = font.textToPoints('Jura', p.width / 2 - 60, 100, 48, {
+            sampleFactor: 0.1
           });
-        });
+          
+          points.forEach(point => {
+            particles.push({
+              pos: p.createVector(point.x, point.y),
+              vel: p.createVector(p.random(-1, 1), p.random(-1, 1)),
+              size: p.random(2, 4),
+              color: colors[Math.floor(p.random(0, colors.length))]
+            });
+          });
+        }
       };
 
       p.draw = () => {
         p.clear();
         
-        if (!fontLoaded) {
+        if (!fontLoaded || !font) {
           // Draw simple text if font failed to load
           p.fill(255);
           p.noStroke();
@@ -130,7 +128,7 @@ export const AnimatedHeroText = () => {
     <div ref={containerRef} className="w-full h-[200px]">
       {isLoading && (
         <div className="w-full h-full flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-cyberpunk-blue animate-glow">Jura</h1>
+          <h1 className="text-5xl font-bold text-white animate-pulse">Jura</h1>
         </div>
       )}
     </div>
