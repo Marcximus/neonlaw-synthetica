@@ -10,7 +10,7 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center gradient-text">Om Mig</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center gradient-text">Mød Din Nye Partner</h2>
           
           {/* Image Container */}
           <motion.div 
