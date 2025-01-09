@@ -24,42 +24,30 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-3xl mx-auto"
         >
           <motion.h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 text-white tracking-tight"
+            className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight glass p-6 rounded-lg backdrop-blur-md"
             animate={{ 
               textShadow: [
-                "0 0 8px rgba(155,109,255,0.3)",
-                "0 0 12px rgba(155,109,255,0.3)",
-                "0 0 8px rgba(155,109,255,0.3)"
+                "0 0 4px rgba(155,109,255,0.3)",
+                "0 0 6px rgba(155,109,255,0.3)",
+                "0 0 4px rgba(155,109,255,0.3)"
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             Juridisk Excellence i
-            <br />
-            <span className="gradient-text">Digital Tidsalder</span>
+            <span className="gradient-text block mt-1">Digital Tidsalder</span>
           </motion.h1>
-          <p className="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-sm sm:text-base text-gray-300 max-w-xl mx-auto leading-relaxed glass p-4 rounded-lg backdrop-blur-md"
+          >
             Specialiseret rådgivning inden for M&A og startup-ventures med innovativ tilgang til moderne forretningsudfordringer.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <motion.button 
-              className="px-8 py-4 bg-cyberpunk-purple text-white rounded-lg text-lg font-medium hover:bg-cyberpunk-purple/90 transition-all duration-300 neon-border"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Udforsk Services
-            </motion.button>
-            <motion.button 
-              className="px-8 py-4 bg-black/30 backdrop-blur-lg border border-white/10 text-white rounded-lg text-lg font-medium hover:bg-white/10 transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Lær Mere
-            </motion.button>
-          </div>
+          </motion.p>
         </motion.div>
       </div>
     </section>
