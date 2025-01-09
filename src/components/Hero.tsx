@@ -19,12 +19,12 @@ export const Hero = () => {
         </video>
       </div>
       
-      <div className="container mx-auto px-4 relative z-20 text-center">
+      <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto mt-32"
         >
           <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
             <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
@@ -35,26 +35,28 @@ export const Hero = () => {
               <span>Hurtigt.</span>
               <span>Billigt.</span>
             </div>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-8 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
-            >
-              Slut med vanvittige regninger og sløv respons. Lad mig håndtere det juridiske, og lad os sammen skalere din virksomhed.
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg sm:text-xl text-gray-300 font-medium mt-4"
-            >
-              Prepare for takeoff.
-            </motion.p>
           </motion.div>
         </motion.div>
+
+        <div className="mt-auto mb-16">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          >
+            Slut med vanvittige regninger og sløv respons. Lad mig håndtere det juridiske, og lad os sammen skalere din virksomhed.
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-base sm:text-lg text-gray-300 font-medium mt-4"
+          >
+            Prepare for takeoff.
+          </motion.p>
+        </div>
       </div>
     </section>
   );
