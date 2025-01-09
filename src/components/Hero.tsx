@@ -38,7 +38,7 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <div className="mt-auto mb-16">
+        <div className="mt-auto mb-32">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-base sm:text-lg text-gray-300 font-medium mt-4"
           >
-            Prepare for takeoff.
+            Prepare for takeoff
           </motion.p>
         </div>
       </div>
