@@ -26,13 +26,13 @@ export const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
-          <motion.div className="flex flex-col items-center gap-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight letter-spacing-wide">
+          <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight letter-spacing-wide">
               Jura -
             </h1>
-            <div className="text-2xl sm:text-3xl text-gray-300 space-x-2 font-light tracking-wider">
-              <span>Nemt.</span>
-              <span>Hurtigt.</span>
+            <div className="text-xl sm:text-3xl text-gray-300 space-y-2 sm:space-y-0 sm:space-x-2 font-light tracking-wider">
+              <span className="block sm:inline">Nemt.</span>
+              <span className="block sm:inline">Hurtigt.</span>
               <motion.span
                 animate={{
                   textShadow: [
@@ -46,7 +46,7 @@ export const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="text-orange-500 font-medium"
+                className="text-orange-500 font-medium block sm:inline"
               >
                 Billigt.
               </motion.span>
