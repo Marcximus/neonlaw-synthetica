@@ -43,3 +43,12 @@
     opacity: 0.5;
   }
 }
+
+@keyframes slide {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

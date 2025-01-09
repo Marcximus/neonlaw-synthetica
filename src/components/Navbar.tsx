@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   return (
@@ -7,12 +8,29 @@ export const Navbar = () => {
       "h-16 mb-4 mx-4",
       "flex items-center justify-center",
       "backdrop-blur-lg bg-white/5 border border-white/10",
-      "rounded-t-3xl shadow-lg",
-      "transition-all duration-300 hover:bg-white/10"
+      "rounded-t-3xl shadow-lg overflow-hidden",
+      "transition-all duration-300"
     )}>
-      <span className="text-white font-bold tracking-wider hover:text-cyberpunk-blue transition-colors">
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-yellow-500/20 to-black animate-[slide_4s_linear_infinite]" 
+           style={{
+             backgroundSize: '200% 100%',
+             animation: 'slide 4s linear infinite',
+           }}
+      />
+      <motion.span 
+        className="relative z-10 text-white font-bold tracking-wider"
+        whileHover={{ scale: 1.05 }}
+        animate={{
+          color: ['#ffffff', '#fbbf24', '#ffffff'],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
         LAUNCH
-      </span>
+      </motion.span>
     </nav>
   );
 };
