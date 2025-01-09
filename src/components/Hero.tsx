@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10" />
       
       {/* Video background */}
       <div className="absolute inset-0">
@@ -23,38 +23,38 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center sm:text-left"
+          className="max-w-4xl mx-auto"
         >
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-white"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 text-white tracking-tight"
             animate={{ 
               textShadow: [
-                "0 0 5px rgba(155,109,255,0.5)",
-                "0 0 15px rgba(155,109,255,0.5)",
-                "0 0 5px rgba(155,109,255,0.5)"
+                "0 0 8px rgba(155,109,255,0.3)",
+                "0 0 12px rgba(155,109,255,0.3)",
+                "0 0 8px rgba(155,109,255,0.3)"
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             Juridisk Excellence i
-            <br className="hidden sm:block" />
-            Digital Tidsalder
+            <br />
+            <span className="gradient-text">Digital Tidsalder</span>
           </motion.h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto sm:mx-0">
+          <p className="text-xl sm:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
             Specialiseret rådgivning inden for M&A og startup-ventures med innovativ tilgang til moderne forretningsudfordringer.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <motion.button 
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-cyberpunk-purple text-white rounded-full text-base sm:text-lg font-medium hover:bg-cyberpunk-purple/80 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-cyberpunk-purple text-white rounded-lg text-lg font-medium hover:bg-cyberpunk-purple/90 transition-all duration-300 neon-border"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               Udforsk Services
             </motion.button>
             <motion.button 
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-transparent border border-white/20 text-white rounded-full text-base sm:text-lg font-medium hover:bg-white/10 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-black/30 backdrop-blur-lg border border-white/10 text-white rounded-lg text-lg font-medium hover:bg-white/10 transition-all duration-300"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               Lær Mere
             </motion.button>

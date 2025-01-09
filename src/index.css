@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white antialiased;
   }
 }
 
@@ -25,12 +25,7 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-purple via-cyberpunk-blue to-white;
-}
-
-.cyber-grid {
-  background-size: 30px 30px;
-  background-position: center center;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-purple via-cyberpunk-blue to-cyberpunk-pink;
 }
 
 .neon-border {
@@ -44,6 +39,7 @@
     );
     z-index: -1;
     margin: -1px;
-    filter: blur(8px);
+    filter: blur(12px);
+    opacity: 0.5;
   }
 }
