@@ -2,58 +2,54 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="min-h-screen flex items-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black z-10" />
+      
+      {/* Background image/pattern */}
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/7bfa0e12-1118-4a17-8559-a3d64ecdc2d5.png')] bg-cover bg-center" />
+      
+      <div className="container mx-auto px-4 relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="max-w-3xl"
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
+            className="text-6xl md:text-7xl font-bold mb-6 text-white"
             animate={{ 
               textShadow: [
-                "0 0 10px rgba(0,240,255,0.5)",
-                "0 0 20px rgba(0,240,255,0.5)",
-                "0 0 10px rgba(0,240,255,0.5)"
+                "0 0 5px rgba(155,109,255,0.5)",
+                "0 0 15px rgba(155,109,255,0.5)",
+                "0 0 5px rgba(155,109,255,0.5)"
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            Fremtidsrettet
+            Juridisk Excellence i
             <br />
-            Juridisk Innovation
+            Digital Tidsalder
           </motion.h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            Banebrydende M&A og Startup-Rådgivning i den Digitale Tidsalder
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+            Specialiseret rådgivning inden for M&A og startup-ventures med innovativ tilgang til moderne forretningsudfordringer.
           </p>
-          <motion.button 
-            className="neon-border glass px-8 py-4 rounded-lg text-cyberpunk-blue hover:text-white hover:bg-cyberpunk-blue/20 transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Book Konsultation
-          </motion.button>
+          <div className="flex flex-wrap gap-4">
+            <motion.button 
+              className="px-8 py-4 bg-cyberpunk-purple text-white rounded-full text-lg font-medium hover:bg-cyberpunk-purple/80 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Udforsk Services
+            </motion.button>
+            <motion.button 
+              className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full text-lg font-medium hover:bg-white/10 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Lær Mere
+            </motion.button>
+          </div>
         </motion.div>
-      </div>
-      <div className="absolute inset-0 -z-10">
-        <motion.div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyberpunk-blue/10 rounded-full blur-[100px]"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyberpunk-purple/10 rounded-full blur-[100px]"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.3, 0.5]
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
       </div>
     </section>
   );
