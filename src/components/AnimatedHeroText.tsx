@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import p5 from 'p5';
 
 export const AnimatedHeroText = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<p5 | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current || canvasRef.current) return;
@@ -17,13 +18,28 @@ export const AnimatedHeroText = () => {
         color: string;
       }> = [];
       const colors = ['#00F0FF', '#9B6DFF', '#FF2E93'];
+      let fontLoaded = false;
       
       p.preload = () => {
-        font = p.loadFont('https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXsrPMBTTA.woff2');
+        // Use a web-safe font as fallback
+        font = p.loadFont('https://fonts.googleapis.com/static/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
+          () => {
+            fontLoaded = true;
+            setIsLoading(false);
+          },
+          () => {
+            // On error, try to use system font
+            console.log('Failed to load custom font, using system font');
+            fontLoaded = true;
+            setIsLoading(false);
+          }
+        );
       };
 
       p.setup = () => {
         p.createCanvas(p.windowWidth, 200);
+        if (!fontLoaded) return;
+        
         p.textFont(font);
         p.textSize(48);
         p.textAlign(p.CENTER, p.CENTER);
@@ -44,6 +60,8 @@ export const AnimatedHeroText = () => {
       };
 
       p.draw = () => {
+        if (!fontLoaded) return;
+        
         p.clear();
         
         // Draw connecting lines
@@ -94,5 +112,13 @@ export const AnimatedHeroText = () => {
     };
   }, []);
 
-  return <div ref={containerRef} className="w-full h-[200px]" />;
+  return (
+    <div ref={containerRef} className="w-full h-[200px]">
+      {isLoading && (
+        <div className="w-full h-full flex items-center justify-center">
+          <h1 className="text-5xl font-bold gradient-text animate-glow">Jura</h1>
+        </div>
+      )}
+    </div>
+  );
 };
