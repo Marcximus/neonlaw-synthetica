@@ -4,10 +4,7 @@ import { Rocket, Scale, Briefcase } from "lucide-react";
 const services = [
   {
     icon: <Rocket className="w-8 h-8" />,
-    title: {
-      prefix: "Hvidglødende",
-      suffix: "Effektivitet"
-    },
+    title: "Hvidglødende Effektivitet",
     description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
   },
   {
@@ -48,11 +45,8 @@ export const Services = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 tracking-tight">
-                {typeof service.title === 'object' ? (
-                  <div className="flex flex-col items-center">
-                    <span className="subtle-glow mb-2">{service.title.prefix}</span>
-                    <span className="text-white">{service.title.suffix}</span>
-                  </div>
+                {service.title === "Hvidglødende Effektivitet" ? (
+                  <span className="subtle-glow">{service.title}</span>
                 ) : (
                   <span className="text-white">{service.title}</span>
                 )}
