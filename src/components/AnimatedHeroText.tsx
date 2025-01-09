@@ -21,8 +21,8 @@ export const AnimatedHeroText = () => {
       let fontLoaded = false;
       
       p.preload = () => {
-        // Use a web-safe font as fallback
-        font = p.loadFont('https://fonts.googleapis.com/static/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
+        // Load the font from the system fonts
+        font = p.loadFont('/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
           () => {
             fontLoaded = true;
             setIsLoading(false);
@@ -30,6 +30,7 @@ export const AnimatedHeroText = () => {
           () => {
             // On error, try to use system font
             console.log('Failed to load custom font, using system font');
+            font = p.textFont('Arial');
             fontLoaded = true;
             setIsLoading(false);
           }
@@ -116,7 +117,7 @@ export const AnimatedHeroText = () => {
     <div ref={containerRef} className="w-full h-[200px]">
       {isLoading && (
         <div className="w-full h-full flex items-center justify-center">
-          <h1 className="text-5xl font-bold gradient-text animate-glow">Jura</h1>
+          <h1 className="text-5xl font-bold text-cyberpunk-blue animate-glow">Jura</h1>
         </div>
       )}
     </div>
