@@ -30,10 +30,10 @@ export const Hero = () => {
             <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
               Jura
             </h1>
-            <div className="text-xl sm:text-3xl text-gray-300 space-y-2 sm:space-y-0 sm:space-x-2 font-light tracking-wider">
-              <span className="block sm:inline">Nemt.</span>
-              <span className="block sm:inline">Hurtigt.</span>
-              <span className="block sm:inline text-orange-500 font-light">Billigt.</span>
+            <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
+              <span>Nemt.</span>
+              <span>Hurtigt.</span>
+              <span>Billigt.</span>
             </div>
           </motion.div>
         </motion.div>
