@@ -18,21 +18,59 @@
   body {
     @apply bg-cyberpunk-black text-white;
     background-image: 
-      radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 100% 0%, rgba(155, 109, 255, 0.03) 0%, transparent 50%);
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 0%, rgba(155, 109, 255, 0.1) 0%, transparent 50%);
+    background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
   }
 }
 
 .glass {
   @apply backdrop-blur-md bg-white/5 border border-white/10;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
 }
 
 .neon-glow {
   text-shadow: 0 0 10px theme('colors.cyberpunk.blue'), 
                0 0 20px theme('colors.cyberpunk.blue'),
-               0 0 30px theme('colors.cyberpunk.blue');
+               0 0 30px theme('colors.cyberpunk.blue'),
+               0 0 40px theme('colors.cyberpunk.blue');
 }
 
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-blue via-cyberpunk-purple to-cyberpunk-pink;
+  filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
+}
+
+.cyber-grid {
+  background-image: linear-gradient(rgba(0, 240, 255, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 240, 255, 0.2) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+.neon-border {
+  @apply relative;
+  &::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg;
+    background: linear-gradient(45deg, 
+      theme('colors.cyberpunk.blue'), 
+      theme('colors.cyberpunk.purple'), 
+      theme('colors.cyberpunk.pink')
+    );
+    z-index: -1;
+    margin: -2px;
+    animation: borderGlow 3s linear infinite;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
