@@ -3,10 +3,20 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black z-10" />
       
-      {/* Background image/pattern */}
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/7bfa0e12-1118-4a17-8559-a3d64ecdc2d5.png')] bg-cover bg-center" />
+      {/* Video background */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/lovable-uploads/rocket.mp4" type="video/mp4" />
+        </video>
+      </div>
       
       <div className="container mx-auto px-4 relative z-20">
         <motion.div
