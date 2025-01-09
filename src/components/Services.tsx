@@ -39,9 +39,9 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="glass p-6 sm:p-8 rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="glass p-6 sm:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-cyberpunk-purple">
+              <div className="mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
               </div>
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white tracking-tight">{service.title}</h3>
