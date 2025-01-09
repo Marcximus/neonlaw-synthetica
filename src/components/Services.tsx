@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { Rocket, Scale, Briefcase } from "lucide-react";
+import { P5Wrapper } from "./P5Wrapper";
 
 const services = [
   {
     icon: <Rocket className="w-8 h-8" />,
-    title: "Hvidglødende Effektivitet",
+    title: {
+      prefix: "Hvidglødende",
+      suffix: "Effektivitet"
+    },
     description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
   },
   {
@@ -18,6 +22,49 @@ const services = [
     description: "Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid gratis at ringe til mig.",
   },
 ];
+
+const glowingTextSketch = (p: p5) => {
+  let opacity = 0;
+  let increasing = true;
+
+  p.setup = () => {
+    p.createCanvas(200, 50);
+    p.textAlign(p.CENTER, p.CENTER);
+    p.textSize(20);
+    p.frameRate(30);
+  };
+
+  p.draw = () => {
+    p.clear();
+    p.noStroke();
+    
+    // Create multiple layers of text with different sizes and opacities for the glow effect
+    for (let i = 5; i >= 0; i--) {
+      const alpha = opacity * (1 - i/6);
+      p.fill(255, 255, 255, alpha * 255);
+      p.textSize(20 + i);
+      p.text("Hvidglødende", p.width/2, p.height/2);
+    }
+
+    // Base text
+    p.fill(255);
+    p.textSize(20);
+    p.text("Hvidglødende", p.width/2, p.height/2);
+
+    // Update opacity for pulsing effect
+    if (increasing) {
+      opacity += 0.05;
+      if (opacity >= 1) {
+        increasing = false;
+      }
+    } else {
+      opacity -= 0.05;
+      if (opacity <= 0.5) {
+        increasing = true;
+      }
+    }
+  };
+};
 
 export const Services = () => {
   return (
@@ -44,7 +91,18 @@ export const Services = () => {
               <div className="mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white tracking-tight">{service.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 tracking-tight">
+                {typeof service.title === 'object' ? (
+                  <div className="flex flex-col items-center">
+                    <div className="h-[50px] w-[200px] mb-2">
+                      <P5Wrapper sketch={glowingTextSketch} />
+                    </div>
+                    <span className="text-white">{service.title.suffix}</span>
+                  </div>
+                ) : (
+                  <span className="text-white">{service.title}</span>
+                )}
+              </h3>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{service.description}</p>
             </motion.div>
           ))}
