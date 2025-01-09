@@ -6,6 +6,7 @@ import { Contact } from "../components/Contact";
 import { Testimonials } from "../components/Testimonials";
 import { Process } from "../components/Process";
 import { Industries } from "../components/Industries";
+import { Navbar } from "../components/Navbar";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Testimonials />
       <About />
       <Contact />
+      <Navbar />
     </main>
   );
 };
