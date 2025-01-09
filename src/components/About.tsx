@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { InteractiveBackground } from "./InteractiveBackground";
 
 export const About = () => {
   return (
     <section className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black via-black/95 to-black">
+      <InteractiveBackground />
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-4xl mx-auto"
@@ -12,9 +14,9 @@ export const About = () => {
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center gradient-text">Mød Din Nye Partner</h2>
           
-          {/* Image Container */}
+          {/* Image Container - Made smaller with max-w-sm */}
           <motion.div 
-            className="mb-12 glass p-2 rounded-xl max-w-md mx-auto"
+            className="mb-12 glass p-2 rounded-xl max-w-sm mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
