@@ -33,23 +33,7 @@ export const Hero = () => {
             <div className="text-xl sm:text-3xl text-gray-300 space-y-2 sm:space-y-0 sm:space-x-2 font-light tracking-wider">
               <span className="block sm:inline">Nemt.</span>
               <span className="block sm:inline">Hurtigt.</span>
-              <motion.span
-                animate={{
-                  textShadow: [
-                    "0 0 4px rgba(249, 115, 22, 0.4)",
-                    "0 0 8px rgba(249, 115, 22, 0.6)",
-                    "0 0 4px rgba(249, 115, 22, 0.4)"
-                  ]
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="text-orange-500 font-medium block sm:inline"
-              >
-                Billigt.
-              </motion.span>
+              <span className="block sm:inline text-orange-500 font-light">Billigt.</span>
             </div>
           </motion.div>
         </motion.div>
