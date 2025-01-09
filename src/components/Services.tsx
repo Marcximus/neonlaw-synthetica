@@ -13,7 +13,7 @@ const services = [
   {
     icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Kommerciel Tilgang",
-    description: "Selskaber skal i stigende grad finde fleksible løsninger, og være smidge i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
+    description: "Selskaber skal i stigende grad finde fleksible løsninger, og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
   },
   {
     icon: <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />,
