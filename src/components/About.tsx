@@ -11,6 +11,23 @@ export const About = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center gradient-text">Om Mig</h2>
+          
+          {/* Image Container */}
+          <motion.div 
+            className="mb-12 glass p-2 rounded-xl max-w-md mx-auto"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="aspect-[3/4] rounded-lg overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                alt="Professional headshot"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
           <div className="glass p-6 sm:p-8 rounded-xl space-y-6">
             <p className="text-gray-300 leading-relaxed">
               Som specialiseret M&A- og startup-advokat har jeg dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel erhvervsjura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener.
