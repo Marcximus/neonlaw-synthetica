@@ -35,6 +35,15 @@ export const Hero = () => {
               <span>Hurtigt.</span>
               <span>Billigt.</span>
             </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-8 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            >
+              Slut med vanvittige regninger og sløv respons. Lad mig håndtere det juridiske, og lad os sammen skalere din virksomhed. Prepare for takeoff.
+            </motion.p>
           </motion.div>
         </motion.div>
       </div>
