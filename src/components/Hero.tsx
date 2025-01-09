@@ -27,10 +27,10 @@ export const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.div className="flex flex-col items-center gap-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight letter-spacing-wide">
               Jura -
             </h1>
-            <div className="text-2xl sm:text-3xl text-gray-300 space-x-2">
+            <div className="text-2xl sm:text-3xl text-gray-300 space-x-2 font-light tracking-wider">
               <span>Nemt.</span>
               <span>Hurtigt.</span>
               <motion.span
@@ -46,7 +46,7 @@ export const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="text-orange-500"
+                className="text-orange-500 font-medium"
               >
                 Billigt.
               </motion.span>
