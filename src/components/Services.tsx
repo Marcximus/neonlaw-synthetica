@@ -4,18 +4,18 @@ import { Rocket, Scale, Briefcase } from "lucide-react";
 const services = [
   {
     icon: <Rocket className="w-8 h-8" />,
-    title: "Startup Rådgivning",
-    description: "Strategisk vejledning til innovative startups gennem etablering og vækst.",
+    title: "Hvidglødende Effektivitet",
+    description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
   },
   {
     icon: <Scale className="w-8 h-8" />,
-    title: "M&A Strategi",
-    description: "Professionel navigation gennem komplekse fusioner og virksomhedsopkøb.",
+    title: "Kommerciel Tilgang",
+    description: "Selskaber skal i stigende grad finde fleksible løsninger, og være smidge i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
-    title: "Juridisk Innovation",
-    description: "Moderne juridiske løsninger tilpasset den digitale økonomi.",
+    title: "Yderst konkurrencedygtige priser",
+    description: "Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid gratis at ringe til mig.",
   },
 ];
 
@@ -29,7 +29,7 @@ export const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Vores Services
+          Du får
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12">
           {services.map((service, index) => (
