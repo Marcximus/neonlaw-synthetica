@@ -19,24 +19,26 @@ export const Hero = () => {
         </video>
       </div>
       
-      <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-            <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
-              Jura
-            </h1>
-            <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
-              <span>Nemt.</span>
-              <span>Hurtigt.</span>
-              <span>Billigt.</span>
-            </div>
+      <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
+        <div className="flex-1 flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
+              <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
+                Jura
+              </h1>
+              <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
+                <span>Nemt.</span>
+                <span>Hurtigt.</span>
+                <span>Billigt.</span>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <div className="mt-auto mb-32">
           <motion.p 
