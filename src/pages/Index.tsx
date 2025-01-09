@@ -16,12 +16,12 @@ const Index = () => {
       <InteractiveBackground />
       <Hero />
       <Services />
+      <About />
       <Statistics />
       <DataVisualization />
       <Process />
       <Industries />
       <Testimonials />
-      <About />
       <Contact />
       <Navbar />
     </main>
