@@ -4,18 +4,18 @@ import { Rocket, Scale, Briefcase } from "lucide-react";
 const services = [
   {
     icon: <Rocket className="w-8 h-8 text-cyberpunk-blue" />,
-    title: "Startup Ventures",
-    description: "Guiding innovative startups through formation, funding, and growth.",
+    title: "Startup Rådgivning",
+    description: "Vejledning af innovative startups gennem etablering, finansiering og vækst.",
   },
   {
     icon: <Scale className="w-8 h-8 text-cyberpunk-purple" />,
-    title: "M&A Strategy",
-    description: "Expertly navigating complex mergers and acquisitions.",
+    title: "M&A Strategi",
+    description: "Ekspert navigation gennem komplekse fusioner og opkøb.",
   },
   {
     icon: <Briefcase className="w-8 h-8 text-cyberpunk-pink" />,
-    title: "Legal Innovation",
-    description: "Pioneering legal solutions for the digital economy.",
+    title: "Juridisk Innovation",
+    description: "Banebrydende juridiske løsninger til den digitale økonomi.",
   },
 ];
 
@@ -24,7 +24,7 @@ export const Services = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center gradient-text">
-          Our Services
+          Vores Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
