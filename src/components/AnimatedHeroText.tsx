@@ -21,25 +21,32 @@ export const AnimatedHeroText = () => {
       let fontLoaded = false;
       
       p.preload = () => {
-        // Load the font from the system fonts
-        font = p.loadFont('/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
-          () => {
-            fontLoaded = true;
-            setIsLoading(false);
-          },
-          () => {
-            // On error, try to use system font
-            console.log('Failed to load custom font, using system font');
-            font = p.textFont('Arial');
-            fontLoaded = true;
-            setIsLoading(false);
-          }
-        );
+        try {
+          // Load the font from the public directory
+          font = p.loadFont('/Space_Grotesk/SpaceGrotesk-Medium.ttf', 
+            () => {
+              fontLoaded = true;
+              setIsLoading(false);
+            },
+            () => {
+              console.log('Failed to load custom font');
+              setIsLoading(false);
+            }
+          );
+        } catch (error) {
+          console.error('Error loading font:', error);
+          setIsLoading(false);
+        }
       };
 
       p.setup = () => {
         p.createCanvas(p.windowWidth, 200);
-        if (!fontLoaded) return;
+        if (!fontLoaded) {
+          // If font failed to load, use default font
+          p.textSize(48);
+          p.textAlign(p.CENTER, p.CENTER);
+          return;
+        }
         
         p.textFont(font);
         p.textSize(48);
@@ -61,9 +68,15 @@ export const AnimatedHeroText = () => {
       };
 
       p.draw = () => {
-        if (!fontLoaded) return;
-        
         p.clear();
+        
+        if (!fontLoaded) {
+          // Draw simple text if font failed to load
+          p.fill(255);
+          p.noStroke();
+          p.text('Jura', p.width / 2, 100);
+          return;
+        }
         
         // Draw connecting lines
         p.stroke(255, 20);
