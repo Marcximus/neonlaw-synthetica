@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { AnimatedHeroText } from "./AnimatedHeroText";
 
 export const Hero = () => {
   return (
@@ -28,7 +27,9 @@ export const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-            <AnimatedHeroText />
+            <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
+              Jura
+            </h1>
             <div className="text-xl sm:text-3xl text-gray-300 space-y-2 sm:space-y-0 sm:space-x-2 font-light tracking-wider">
               <span className="block sm:inline">Nemt.</span>
               <span className="block sm:inline">Hurtigt.</span>
