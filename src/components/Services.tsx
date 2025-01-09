@@ -14,7 +14,7 @@ const services = [
   },
   {
     icon: <Briefcase className="w-8 h-8" />,
-    title: "Markedets bedste pris",
+    title: "Markedets Bedste Pris",
     description: "Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid gratis at ringe til mig.",
   },
 ];
