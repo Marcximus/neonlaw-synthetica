@@ -21,7 +21,7 @@ export const About = () => {
           >
             <div className="aspect-[3/4] rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
                 alt="Professional headshot"
                 className="w-full h-full object-cover"
               />
