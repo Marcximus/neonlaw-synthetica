@@ -21,11 +21,14 @@
 }
 
 .glass {
-  @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  @apply backdrop-blur-lg bg-white/5 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  &:hover {
+    @apply bg-white/10 transition-all duration-300;
+  }
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-purple via-cyberpunk-blue to-cyberpunk-pink;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-blue via-cyberpunk-purple to-cyberpunk-pink animate-glow;
 }
 
 .neon-border {
@@ -34,8 +37,8 @@
     content: '';
     @apply absolute inset-0 rounded-lg;
     background: linear-gradient(45deg, 
-      theme('colors.cyberpunk.purple'), 
-      theme('colors.cyberpunk.blue')
+      theme('colors.cyberpunk.blue'), 
+      theme('colors.cyberpunk.purple')
     );
     z-index: -1;
     margin: -1px;
