@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Rocket, Scale, Briefcase } from "lucide-react";
 import { P5Wrapper } from "./P5Wrapper";
+import p5 from 'p5';
 
 const services = [
   {
