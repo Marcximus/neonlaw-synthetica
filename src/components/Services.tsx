@@ -3,17 +3,17 @@ import { Rocket, Scale, Briefcase } from "lucide-react";
 
 const services = [
   {
-    icon: <Rocket className="w-8 h-8" />,
+    icon: <Rocket className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Hvidglødende Effektivitet",
     description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
   },
   {
-    icon: <Scale className="w-8 h-8" />,
+    icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Kommerciel Tilgang",
     description: "Selskaber skal i stigende grad finde fleksible løsninger, og være smidge i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
   },
   {
-    icon: <Briefcase className="w-8 h-8" />,
+    icon: <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Markedets Bedste Pris",
     description: "Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid gratis at ringe til mig.",
   },
@@ -44,9 +44,9 @@ export const Services = () => {
               <div className="mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-bold mb-4 tracking-tight whitespace-normal px-2">
                 {service.title === "Hvidglødende Effektivitet" ? (
-                  <span className="subtle-glow">{service.title}</span>
+                  <span className="subtle-glow inline-block">{service.title}</span>
                 ) : (
                   <span className="text-white">{service.title}</span>
                 )}
