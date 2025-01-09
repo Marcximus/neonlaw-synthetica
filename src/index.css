@@ -6,7 +6,7 @@
   :root {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --primary: 186 100% 50%;
+    --primary: 24 100% 50%; /* Orange */
     --primary-foreground: 240 5.9% 10%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
@@ -25,7 +25,7 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyberpunk-purple via-cyberpunk-blue to-cyberpunk-pink;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#ea384c] via-[#F97316] to-[#FEC6A1];
 }
 
 .neon-border {
@@ -34,8 +34,8 @@
     content: '';
     @apply absolute inset-0 rounded-lg;
     background: linear-gradient(45deg, 
-      theme('colors.cyberpunk.purple'), 
-      theme('colors.cyberpunk.blue')
+      #ea384c,  /* Red */
+      #F97316   /* Orange */
     );
     z-index: -1;
     margin: -1px;

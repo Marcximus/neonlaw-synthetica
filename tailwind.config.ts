@@ -29,9 +29,9 @@ export default {
         foreground: "hsl(var(--foreground))",
         cyberpunk: {
           black: "#0A0A0F",
-          blue: "#00F0FF",
-          purple: "#9B6DFF",
-          pink: "#FF2E93",
+          blue: "#F97316", // Changed to orange
+          purple: "#ea384c", // Changed to red
+          pink: "#D946EF", // Changed to magenta pink
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
