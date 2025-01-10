@@ -8,18 +8,12 @@ const services = [
       first: "Hvidglødende",
       second: "Effektivitet"
     },
-    description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7 (også i weekenden).",
+    description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
   },
   {
     icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Kommerciel Tilgang",
-    description: "Selskaber skal i stigende grad finde " + 
-      "fleksible løsninger".split(" ").map((word, i) => (
-        <span key={i} className="text-cyberpunk-blue animate-glow">{word} </span>
-      )) + 
-      ", og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset. Det er altid " +
-      <span className="text-cyberpunk-blue animate-glow">gratis</span> + 
-      " at ringe til mig.",
+    description: "Selskaber skal i stigende grad finde fleksible løsninger, og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
   },
   {
     icon: <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />,
@@ -64,13 +58,7 @@ export const Services = () => {
                   <span className="text-white">{service.title}</span>
                 )}
               </h3>
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-                {typeof service.description === 'string' ? (
-                  service.description
-                ) : (
-                  <>{service.description}</>
-                )}
-              </p>
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{service.description}</p>
             </motion.div>
           ))}
         </div>
