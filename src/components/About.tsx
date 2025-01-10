@@ -24,9 +24,9 @@ export const About = () => {
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">Mød Din Nye Partner</h2>
           
-          {/* Image Container */}
+          {/* Image Container - Updated to be round */}
           <motion.div 
-            className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-xl max-w-[240px] mx-auto"
+            className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full max-w-[240px] mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
