@@ -3,7 +3,7 @@ import { Rocket, Scale, Briefcase } from "lucide-react";
 
 const services = [
   {
-    icon: <Rocket className="w-8 h-8 sm:w-12 sm:h-12" />,
+    icon: <Rocket className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12" />,
     title: {
       first: "Hvidglødende",
       second: "Effektivitet"
@@ -17,7 +17,7 @@ const services = [
     ),
   },
   {
-    icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
+    icon: <Scale className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12" />,
     title: "Kommerciel Tilgang",
     description: (
       <>
@@ -30,7 +30,7 @@ const services = [
     ),
   },
   {
-    icon: <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />,
+    icon: <Briefcase className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12" />,
     title: "Markedets Bedste Pris",
     description: (
       <>
@@ -44,17 +44,17 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black via-black/95 to-black">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-black via-black/95 to-black">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.h2 
-          className="text-3xl sm:text-5xl font-bold mb-12 sm:mb-24 text-white text-center tracking-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 lg:mb-24 text-white text-center tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           Du får
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -62,12 +62,12 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="glass p-6 sm:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
+              className="glass p-4 sm:p-6 md:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-cyberpunk-purple flex justify-center">
+              <div className="mb-4 sm:mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
               </div>
-              <h3 className="text-lg sm:text-2xl font-bold mb-4 tracking-tight whitespace-normal px-2">
+              <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 tracking-tight whitespace-normal px-2">
                 {typeof service.title === 'object' ? (
                   <span className="inline-block">
                     <span className="subtle-glow">{service.title.first}</span>
@@ -78,7 +78,9 @@ export const Services = () => {
                   <span className="text-white">{service.title}</span>
                 )}
               </h3>
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{service.description}</p>
+              <p className="text-gray-400 leading-relaxed text-xs sm:text-sm md:text-base">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
