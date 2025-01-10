@@ -32,10 +32,9 @@ export const About = () => {
 
           <div className="glass p-6 sm:p-8 rounded-xl mb-8">
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
-            </p>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              Jeg har dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel jura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener. Jeg yder rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på i morgen.
+              Slut med vanvittige regninger og sløv respons.<br />
+              Lad mig håndtere det juridiske, og lad os<br />
+              sammen skalere din virksomhed.
             </p>
           </div>
 
