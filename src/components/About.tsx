@@ -24,20 +24,25 @@ export const About = () => {
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">Mød Din Nye Partner</h2>
           
-          {/* Image Container - Updated to be round */}
+          {/* Image Container - Updated to be clickable */}
           <motion.div 
             className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full max-w-[240px] mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="aspect-square rounded-full overflow-hidden">
+            <a 
+              href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block aspect-square rounded-full overflow-hidden transition-transform hover:scale-105"
+            >
               <img
                 src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
                 alt="Professional headshot"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </a>
           </motion.div>
 
           <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 mb-8">
