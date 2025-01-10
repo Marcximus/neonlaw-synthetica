@@ -55,7 +55,7 @@ export const About = () => {
               <ul className="space-y-1 text-xs sm:text-sm text-gray-300">
                 <li>• Advokat fra Accura</li>
                 <li>• Officer i Hæren</li>
-                <li className="text-[10px] sm:text-sm">• Københavns Universitet</li>
+                <li className="text-[11px] sm:text-sm">• Københavns Universitet</li>
                 <li className="text-[11px] sm:text-sm">• Hong Kong University</li>
               </ul>
             </div>
