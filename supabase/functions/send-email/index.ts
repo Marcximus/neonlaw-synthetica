@@ -8,7 +8,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface ContactFormData {
+interface EmailData {
   name: string;
   email: string;
   message: string;
@@ -21,8 +21,8 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const formData: ContactFormData = await req.json();
-    console.log("Received form data:", formData);
+    const data: EmailData = await req.json();
+    console.log("Received form data:", data);
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -31,23 +31,23 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Corporate Consulting <ms@corporateconsulting.dk>",
+        from: "Corporate Consulting <onboarding@resend.dev>",
         to: ["ms@corporateconsulting.dk"],
-        subject: `Ny besked fra ${formData.name}`,
+        subject: `Ny besked fra ${data.name}`,
         html: `
           <h2>Ny kontaktformular besked</h2>
-          <p><strong>Navn:</strong> ${formData.name}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
+          <p><strong>Navn:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
           <p><strong>Besked:</strong></p>
-          <p>${formData.message}</p>
+          <p>${data.message}</p>
         `,
       }),
     });
 
     if (res.ok) {
-      const data = await res.json();
-      console.log("Email sent successfully:", data);
-      return new Response(JSON.stringify(data), {
+      const responseData = await res.json();
+      console.log("Email sent successfully:", responseData);
+      return new Response(JSON.stringify(responseData), {
         status: 200,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
