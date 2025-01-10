@@ -44,8 +44,8 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed px-4"
           >
-            Slut med vanvittige regninger og sløv respons.<br className="hidden sm:block" />
-            Lad mig håndtere det juridiske, og lad os<br className="hidden sm:block" />
+            Slut med vanvittige regninger og sløv respons.<br />
+            Lad mig håndtere det juridiske, og lad os<br />
             sammen skalere din virksomhed.
           </motion.p>
           
