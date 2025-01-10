@@ -3,9 +3,19 @@ import { InteractiveBackground } from "./InteractiveBackground";
 
 export const About = () => {
   return (
-    <section className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black via-black/95 to-black">
-      <InteractiveBackground />
-      <div className="container mx-auto px-4">
+    <section className="py-16 sm:py-32 relative overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+      >
+        <source src="/rocket.mp4" type="video/mp4" />
+      </video>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="max-w-[90rem] mx-auto"
           initial={{ opacity: 0, y: 20 }}
