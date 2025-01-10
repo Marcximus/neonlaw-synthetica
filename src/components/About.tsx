@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { InteractiveBackground } from "./InteractiveBackground";
-import ProfileBackground from "./ProfileBackground";
 
 export const About = () => {
   return (
@@ -35,30 +34,25 @@ export const About = () => {
             </a>
           </h2>
           
-          {/* Image Container with Background Effect */}
+          {/* Image Container */}
           <motion.div 
-            className="mb-12 relative"
+            className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full max-w-[240px] mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="max-w-[240px] mx-auto relative">
-              <ProfileBackground />
-              <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full relative z-10">
-                <a 
-                  href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block aspect-square rounded-full overflow-hidden transition-transform hover:scale-105"
-                >
-                  <img
-                    src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
-                    alt="Professional headshot"
-                    className="w-full h-full object-cover"
-                  />
-                </a>
-              </div>
-            </div>
+            <a 
+              href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block aspect-square rounded-full overflow-hidden transition-transform hover:scale-105"
+            >
+              <img
+                src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
+                alt="Professional headshot"
+                className="w-full h-full object-cover"
+              />
+            </a>
           </motion.div>
 
           <motion.div 
