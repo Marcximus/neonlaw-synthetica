@@ -45,18 +45,27 @@
 }
 
 .subtle-glow {
-  text-shadow: 0 0 8px currentColor;
+  text-shadow: 
+    0 0 1px rgba(249, 115, 22, 0.5),
+    0 0 2px rgba(249, 115, 22, 0.3),
+    0 0 4px rgba(249, 115, 22, 0.2);
   animation: subtlePulse 2s ease-in-out infinite;
 }
 
 @keyframes subtlePulse {
   0%, 100% {
     opacity: 1;
-    text-shadow: 0 0 8px currentColor;
+    text-shadow: 
+      0 0 1px rgba(249, 115, 22, 0.5),
+      0 0 2px rgba(249, 115, 22, 0.3),
+      0 0 4px rgba(249, 115, 22, 0.2);
   }
   50% {
-    opacity: 0.9;
-    text-shadow: 0 0 12px currentColor;
+    opacity: 0.95;
+    text-shadow: 
+      0 0 2px rgba(249, 115, 22, 0.6),
+      0 0 4px rgba(249, 115, 22, 0.4),
+      0 0 6px rgba(249, 115, 22, 0.3);
   }
 }
 
