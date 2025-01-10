@@ -16,7 +16,7 @@ export const About = () => {
           
           {/* Image Container - Made smaller and circular */}
           <motion.div 
-            className="mb-12 glass neon-border-wrapper p-2 rounded-full max-w-[240px] mx-auto"
+            className="mb-12 glass neon-border-wrapper p-2 rounded-full max-w-[240px] mx-auto backdrop-blur-lg bg-white/5 border border-white/10"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -30,7 +30,7 @@ export const About = () => {
             </div>
           </motion.div>
 
-          <div className="glass neon-border-wrapper p-6 sm:p-8 rounded-xl mb-8">
+          <div className="glass neon-border-wrapper p-6 sm:p-8 rounded-xl mb-8 backdrop-blur-lg bg-white/5 border border-white/10">
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left mb-6">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
             </p>
@@ -41,7 +41,7 @@ export const About = () => {
 
           {/* Specialer and CV grid */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
-            <div className="glass neon-border-wrapper p-6 rounded-lg">
+            <div className="glass neon-border-wrapper p-6 rounded-lg backdrop-blur-lg bg-white/5 border border-white/10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">M&A og Erhvervsret</li>
@@ -50,7 +50,7 @@ export const About = () => {
                 <li className="whitespace-nowrap">Venture Capital</li>
               </ul>
             </div>
-            <div className="glass neon-border-wrapper p-6 rounded-lg">
+            <div className="glass neon-border-wrapper p-6 rounded-lg backdrop-blur-lg bg-white/5 border border-white/10">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">Advokat fra Accura</li>
