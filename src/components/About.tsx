@@ -39,8 +39,8 @@ export const About = () => {
             </p>
           </div>
 
-          {/* Specialer and CV grid with increased width */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-[90rem] mx-auto">
+          {/* Specialer and CV grid */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[15px] sm:text-lg">
