@@ -38,9 +38,10 @@ export const Statistics = () => {
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl sm:text-5xl font-bold mb-12 sm:mb-16 text-center tracking-tight"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           Vores Resultater
         </motion.h2>
@@ -54,10 +55,11 @@ export const Statistics = () => {
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
-              className="glass p-4 sm:p-6 rounded-xl text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="glass p-4 sm:p-6 rounded-xl text-center transform-gpu will-change-transform backface-visibility-hidden"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
             >
               <h3 className="text-2xl sm:text-4xl font-bold mb-2">
                 <AnimatedValue value={stat.value} />
