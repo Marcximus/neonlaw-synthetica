@@ -32,13 +32,13 @@ export const Hero = () => {
                 Jura
               </h1>
               <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-300 font-light tracking-wider mb-4">
-                for virksomheder med fart på
+                for virksomheder med <span className="text-[#F97316] subtle-glow">fart</span> på
               </h2>
             </motion.div>
           </motion.div>
         </div>
 
-        <div className="mt-auto mb-40">
+        <div className="mt-auto mb-44">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
