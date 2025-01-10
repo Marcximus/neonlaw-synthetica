@@ -40,7 +40,7 @@ export const About = () => {
           </div>
 
           {/* Specialer and CV grid with increased width */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[13px] sm:text-base">
