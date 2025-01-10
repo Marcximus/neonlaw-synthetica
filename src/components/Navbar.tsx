@@ -1,7 +1,30 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
+  const [isContactVisible, setIsContactVisible] = useState(false);
+
+  useEffect(() => {
+    const checkContactVisibility = () => {
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        // Check if contact section is in view
+        setIsContactVisible(rect.top <= window.innerHeight && rect.bottom >= 0);
+      }
+    };
+
+    // Initial check
+    checkContactVisibility();
+    
+    // Add scroll listener
+    window.addEventListener('scroll', checkContactVisibility);
+    
+    // Cleanup
+    return () => window.removeEventListener('scroll', checkContactVisibility);
+  }, []);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
@@ -11,6 +34,8 @@ export const Navbar = () => {
       });
     }
   };
+
+  if (isContactVisible) return null;
 
   return (
     <nav className={cn(
