@@ -89,7 +89,7 @@ export const Services = () => {
               <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 tracking-tight whitespace-normal px-2">
                 {typeof service.title === 'object' ? (
                   <span className="inline-block">
-                    <span className="text-white inline-block">{service.title.first}</span>
+                    <span className="white-glow inline-block">{service.title.first}</span>
                     {" "}
                     <span className="text-white">{service.title.second}</span>
                   </span>
