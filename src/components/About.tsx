@@ -43,7 +43,7 @@ export const About = () => {
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
-              <ul className="space-y-2 text-gray-300 text-[11px] sm:text-sm">
+              <ul className="space-y-2 text-gray-300 text-[9px] sm:text-xs">
                 <li>• M&A og Erhvervsret</li>
                 <li>• Startup Rådgivning</li>
                 <li>• Tech & AI Jura</li>
@@ -52,7 +52,7 @@ export const About = () => {
             </div>
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
-              <ul className="space-y-2 text-gray-300 text-[11px] sm:text-sm">
+              <ul className="space-y-2 text-gray-300 text-[9px] sm:text-xs">
                 <li>• Advokat fra Accura</li>
                 <li>• Officer i Hæren</li>
                 <li>• Københavns Universitet</li>
