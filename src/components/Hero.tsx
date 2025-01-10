@@ -11,7 +11,8 @@ export const Hero = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover will-change-transform"
+          style={{ transform: 'translate3d(0,0,0)' }}
         >
           <source src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/videos/Rocket%20Engine.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -23,11 +24,14 @@ export const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="w-full"
           >
-            <motion.div className="flex flex-col items-center gap-4">
-              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold gradient-text mb-2">
+            <motion.div 
+              className="flex flex-col items-center gap-4"
+              style={{ willChange: 'transform' }}
+            >
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold gradient-text mb-2 will-change-transform">
                 Jura
               </h1>
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-light tracking-wider mb-4">
@@ -41,7 +45,7 @@ export const Hero = () => {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed px-4"
           >
             Slut med vanvittige regninger og sløv respons.<br />
@@ -52,7 +56,7 @@ export const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm sm:text-base md:text-lg text-gray-300 font-medium mt-4"
           >
             Prepare for takeoff
