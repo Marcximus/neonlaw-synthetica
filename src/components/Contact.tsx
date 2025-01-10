@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export const Contact = () => {
   return (
-    <section className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95">
+    <section id="contact-section" className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95">
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-3xl mx-auto text-center mb-12 sm:mb-16"

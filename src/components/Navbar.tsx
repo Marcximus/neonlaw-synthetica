@@ -2,6 +2,13 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export const Navbar = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className={cn(
       "fixed bottom-0 left-0 right-0 z-50",
@@ -17,8 +24,9 @@ export const Navbar = () => {
              animation: 'slide 4s linear infinite',
            }}
       />
-      <motion.span 
-        className="relative z-10 text-white font-bold tracking-wider text-sm sm:text-base"
+      <motion.button 
+        onClick={scrollToContact}
+        className="relative z-10 text-white font-bold tracking-wider text-sm sm:text-base cursor-pointer"
         whileHover={{ scale: 1.05 }}
         animate={{
           color: ['#ffffff', '#fbbf24', '#ffffff'],
@@ -30,7 +38,7 @@ export const Navbar = () => {
         }}
       >
         LAUNCH
-      </motion.span>
+      </motion.button>
     </nav>
   );
 };
