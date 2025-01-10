@@ -52,6 +52,7 @@ export const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             Corporate Consulting
           </motion.h2>
@@ -60,6 +61,7 @@ export const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             forretning før regulering
           </motion.p>
@@ -70,9 +72,17 @@ export const Services = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className="glass p-4 sm:p-6 md:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: "easeOut"
+              }}
+              viewport={{ 
+                once: true, 
+                margin: "-50px",
+                amount: 0.3 
+              }}
+              className="glass p-4 sm:p-6 md:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center transform-gpu will-change-transform"
             >
               <div className="mb-4 sm:mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
