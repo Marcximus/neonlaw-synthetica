@@ -8,7 +8,7 @@ const AnimatedValue = ({ value }: { value: string }) => {
 
   useEffect(() => {
     const animation = animate(count, baseNumber, {
-      duration: 2,
+      duration: 3.5, // Increased duration from 2 to 3.5 seconds
       ease: "easeOut",
     });
 
@@ -48,8 +48,8 @@ export const Statistics = () => {
               className="glass p-4 sm:p-6 rounded-xl text-center transform-gpu will-change-transform backface-visibility-hidden"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.1, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.1 }}
             >
               <h3 className="text-2xl sm:text-4xl font-bold mb-2">
                 <AnimatedValue value={stat.value} />
