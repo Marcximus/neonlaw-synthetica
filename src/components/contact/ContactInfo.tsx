@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Building2 } from "lucide-react";
 
 const contactItems = [
   {
@@ -18,6 +18,11 @@ const contactItems = [
     title: "Email",
     details: "ms@corporateconsulting.dk",
     href: "mailto:ms@corporateconsulting.dk"
+  },
+  {
+    icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />,
+    title: "CVR Nummer",
+    details: "42041556"
   }
 ];
 
