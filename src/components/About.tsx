@@ -43,20 +43,20 @@ export const About = () => {
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
-              <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm pl-2">
-                <li className="whitespace-nowrap">• M&A og Erhvervsret</li>
-                <li className="whitespace-nowrap">• Startup Rådgivning</li>
-                <li className="whitespace-nowrap">• Tech & AI Jura</li>
-                <li className="whitespace-nowrap">• Venture Capital</li>
+              <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
+                <li className="whitespace-nowrap">M&A og Erhvervsret</li>
+                <li className="whitespace-nowrap">Startup Rådgivning</li>
+                <li className="whitespace-nowrap">Tech & AI Jura</li>
+                <li className="whitespace-nowrap">Venture Capital</li>
               </ul>
             </div>
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
-              <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm pl-2">
-                <li className="whitespace-nowrap">• Advokat fra Accura</li>
-                <li className="whitespace-nowrap">• Officer i Hæren</li>
-                <li className="whitespace-nowrap">• Københavns Universitet</li>
-                <li className="whitespace-nowrap">• Hong Kong University</li>
+              <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
+                <li className="whitespace-nowrap">Advokat fra Accura</li>
+                <li className="whitespace-nowrap">Officer i Hæren</li>
+                <li className="whitespace-nowrap">Københavns Universitet</li>
+                <li className="whitespace-nowrap">Hong Kong University</li>
               </ul>
             </div>
           </div>
