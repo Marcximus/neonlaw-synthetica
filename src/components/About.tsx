@@ -24,7 +24,7 @@ export const About = () => {
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">Mød Din Nye Partner</h2>
           
-          {/* Image Container */}
+          {/* Image Container - Updated to be clickable */}
           <motion.div 
             className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full max-w-[240px] mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -45,32 +45,18 @@ export const About = () => {
             </a>
           </motion.div>
 
-          <motion.div 
-            className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] rounded-xl p-6 sm:p-8 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
-            whileHover={{ 
-              boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
-              borderColor: "rgba(255, 255, 255, 0.05)"
-            }}
-            whileTap={{ scale: 0.98 }}
-          >
+          <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 mb-8">
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left mb-6">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
             </p>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left">
               Jeg har dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel jura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener. Jeg yder rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på i morgen.
             </p>
-          </motion.div>
+          </div>
 
           {/* Specialer and CV grid */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
-            <motion.div 
-              className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
-              whileHover={{ 
-                boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
-                borderColor: "rgba(255, 255, 255, 0.05)"
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
+            <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">M&A og Erhvervsret</li>
@@ -78,15 +64,8 @@ export const About = () => {
                 <li className="whitespace-nowrap">Tech & AI Jura</li>
                 <li className="whitespace-nowrap">Venture Capital</li>
               </ul>
-            </motion.div>
-            <motion.div 
-              className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
-              whileHover={{ 
-                boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
-                borderColor: "rgba(255, 255, 255, 0.05)"
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
+            </div>
+            <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">Advokat fra Accura</li>
@@ -94,7 +73,7 @@ export const About = () => {
                 <li className="whitespace-nowrap">Københavns Universitet</li>
                 <li className="whitespace-nowrap">Hong Kong University</li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </div>
