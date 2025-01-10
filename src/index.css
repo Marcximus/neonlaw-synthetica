@@ -45,25 +45,18 @@
 }
 
 .subtle-glow {
-  color: inherit;
-  text-shadow: 0 0 10px currentColor,
-               0 0 20px currentColor,
-               0 0 30px currentColor;
+  text-shadow: 0 0 8px currentColor;
   animation: subtlePulse 2s ease-in-out infinite;
 }
 
 @keyframes subtlePulse {
   0%, 100% {
     opacity: 1;
-    text-shadow: 0 0 10px currentColor,
-                 0 0 20px currentColor,
-                 0 0 30px currentColor;
+    text-shadow: 0 0 8px currentColor;
   }
   50% {
-    opacity: 0.8;
-    text-shadow: 0 0 15px currentColor,
-                 0 0 25px currentColor,
-                 0 0 35px currentColor;
+    opacity: 0.9;
+    text-shadow: 0 0 12px currentColor;
   }
 }
 
