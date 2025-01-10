@@ -37,7 +37,7 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="-mt-32 mb-32">
+        <div className="-mt-64 mb-32">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
