@@ -31,16 +31,16 @@ export const About = () => {
           </motion.div>
 
           <div className="glass p-6 sm:p-8 rounded-xl space-y-6">
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               Jeg har dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel jura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener. Jeg yder rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på i morgen.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+            <div className="grid grid-cols-2 gap-4">
               <div className="glass p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
-                <ul className="space-y-2 text-gray-300">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
+                <ul className="space-y-1 text-xs sm:text-sm text-gray-300">
                   <li>• M&A og Erhvervsret</li>
                   <li>• Startup Rådgivning</li>
                   <li>• Tech & AI Jura</li>
@@ -48,8 +48,8 @@ export const About = () => {
                 </ul>
               </div>
               <div className="glass p-4 rounded-lg">
-                <h3 className="text-xl font-bold mb-2 text-cyberpunk-blue">CV</h3>
-                <ul className="space-y-2 text-gray-300">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-cyberpunk-blue">CV</h3>
+                <ul className="space-y-1 text-xs sm:text-sm text-gray-300">
                   <li>• Advokat fra Accura</li>
                   <li>• Officer i Hæren</li>
                   <li>• Københavns Universitet</li>
