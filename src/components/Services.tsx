@@ -34,7 +34,7 @@ const services = [
     title: "Markedets Bedste Pris",
     description: (
       <>
-        Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid{' '}
+        Det sidste man gider benytte sit cashflow på er at betale dyre advokatregninger. Derfor er det altid{' '}
         <span className="text-cyberpunk-blue animate-pulse">gratis</span>
         {' '}at ringe til mig.
       </>
