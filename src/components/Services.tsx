@@ -46,14 +46,24 @@ export const Services = () => {
   return (
     <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-b from-black via-black/95 to-black">
       <div className="container mx-auto px-4 sm:px-6">
-        <motion.h2 
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 lg:mb-24 text-white text-center tracking-tight"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Corporate Consulting
-        </motion.h2>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-24">
+          <motion.h2 
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Corporate Consulting
+          </motion.h2>
+          <motion.p
+            className="text-gray-400 mt-2 text-sm sm:text-base md:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            - forretning før regulering
+          </motion.p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {services.map((service, index) => (
             <motion.div
