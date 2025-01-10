@@ -8,7 +8,13 @@ const services = [
       first: "Hvidglødende",
       second: "Effektivitet"
     },
-    description: "Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg available 24/7.",
+    description: (
+      <>
+        Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg{' '}
+        <span className="text-cyberpunk-blue animate-glow">tilgængelig 24/7</span>
+        {' '}(også i weekenden).
+      </>
+    ),
   },
   {
     icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
