@@ -16,7 +16,7 @@ const AnimatedValue = ({ value }: { value: string }) => {
   }, [baseNumber, count]);
 
   return (
-    <motion.span className="gradient-text">
+    <motion.span className="subtle-glow">
       {value.includes("+") ? (
         <>
           <motion.span>{rounded}</motion.span>+
@@ -34,24 +34,14 @@ const AnimatedValue = ({ value }: { value: string }) => {
 
 export const Statistics = () => {
   return (
-    <section className="py-16 sm:py-32 relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95">
+    <section className="relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95">
       <div className="container mx-auto px-4">
-        <motion.h2 
-          className="text-3xl sm:text-5xl font-bold mb-12 sm:mb-16 text-center tracking-tight"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          Vores Resultater
-        </motion.h2>
-        
         <div className="grid grid-cols-2 gap-4 sm:gap-6">
           {[
-            { label: "Succesfulde M&As", value: "250+" },
-            { label: "Startup Exits", value: "120+" },
-            { label: "Klient Tilfredshed", value: "98%" },
-            { label: "Årlig Vækst", value: "40%" }
+            { label: "M&A Deals", value: "200+" },
+            { label: "Startup Exits", value: "50+" },
+            { label: "IPO's", value: "5" },
+            { label: "Klient Tilfredshed", value: "100%" }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
