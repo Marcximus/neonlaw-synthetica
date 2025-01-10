@@ -28,7 +28,7 @@ export const Hero = () => {
             className="max-w-4xl"
           >
             <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-              <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4">
+              <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4 whitespace-nowrap">
                 Business Jura
               </h1>
               <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
