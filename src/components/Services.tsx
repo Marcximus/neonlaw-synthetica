@@ -49,19 +49,19 @@ export const Services = () => {
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-24">
           <motion.h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             Corporate Consulting
           </motion.h2>
           <motion.p
             className="text-gray-400 mt-2 text-sm sm:text-base md:text-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, margin: "-50px" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             forretning før regulering
           </motion.p>
@@ -70,19 +70,18 @@ export const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ 
-                duration: 0.5, 
+                duration: 0.4,
                 delay: index * 0.1,
-                ease: "easeOut"
+                ease: [0.25, 0.1, 0.25, 1],
               }}
               viewport={{ 
-                once: true, 
-                margin: "-50px",
-                amount: 0.3 
+                once: true,
+                amount: 0.1
               }}
-              className="glass p-4 sm:p-6 md:p-8 rounded-xl hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center transform-gpu will-change-transform"
+              className="glass p-4 sm:p-6 md:p-8 rounded-xl hover:bg-white/10 transition-colors duration-300 flex flex-col items-center text-center transform-gpu will-change-transform backface-visibility-hidden"
             >
               <div className="mb-4 sm:mb-6 text-cyberpunk-purple flex justify-center">
                 {service.icon}
