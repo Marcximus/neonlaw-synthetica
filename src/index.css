@@ -79,22 +79,22 @@
 /* Toast animations */
 @keyframes toastSlideIn {
   from {
-    transform: translateX(100%);
+    transform: translate(-50%, 100%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translate(-50%, 0);
     opacity: 1;
   }
 }
 
 @keyframes toastSlideOut {
   from {
-    transform: translateX(0);
+    transform: translate(-50%, 0);
     opacity: 1;
   }
   to {
-    transform: translateX(100%);
+    transform: translate(-50%, 100%);
     opacity: 0;
   }
 }
@@ -102,7 +102,7 @@
 /* Custom toast styling */
 [role="status"][data-state="open"] {
   animation: toastSlideIn 0.4s ease-out;
-  @apply backdrop-blur-lg bg-white/5 border border-white/10 neon-border-wrapper;
+  @apply fixed left-1/2 bottom-8 -translate-x-1/2 backdrop-blur-lg bg-black/95 border border-white/10 rounded-lg shadow-xl text-center min-w-[320px] max-w-[420px];
 }
 
 [role="status"][data-state="closed"] {
@@ -110,13 +110,13 @@
 }
 
 [role="status"] {
-  @apply bg-cyberpunk-black/80 border-cyberpunk-blue/20 backdrop-blur-lg;
+  @apply bg-black/95 border-white/10 backdrop-blur-lg;
 }
 
 [role="status"] [data-radix-toast-title] {
-  @apply text-lg font-bold gradient-text;
+  @apply text-lg font-bold gradient-text text-center;
 }
 
 [role="status"] [data-radix-toast-description] {
-  @apply text-gray-300;
+  @apply text-gray-300 text-center;
 }
