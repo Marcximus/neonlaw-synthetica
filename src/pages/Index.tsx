@@ -9,11 +9,13 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <InteractiveBackground />
-      <Hero />
-      <Services />
-      <About />
-      <Contact />
-      <Navbar />
+      <div className="flex flex-col">
+        <Hero />
+        <Services />
+        <About />
+        <Contact />
+        <Navbar />
+      </div>
     </main>
   );
 };
