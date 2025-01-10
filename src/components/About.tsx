@@ -28,7 +28,7 @@ export const About = () => {
               href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
               target="_blank"
               rel="noopener noreferrer"
-              className="subtle-glow cursor-pointer hover:opacity-80 transition-opacity"
+              className="gradient-text cursor-pointer hover:opacity-80 transition-opacity"
             >
               Marcus
             </a>
