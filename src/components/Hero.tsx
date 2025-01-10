@@ -20,22 +20,27 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
-        <div className="flex-1 flex items-center justify-center -mt-40">
+        <div className="flex-1 flex items-center justify-center -mt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-5xl"
+            className="max-w-5xl" // Increased from max-w-4xl to max-w-5xl
           >
             <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text subtle-glow mb-4 whitespace-normal [text-shadow:_0_0_30px_rgba(255,255,255,0.7)]">
-                Corporate Consulting
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text mb-4 whitespace-nowrap">
+                Business Jura
               </h1>
+              <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
+                <span>Nemt.</span>
+                <span>Hurtigt.</span>
+                <span>Billigt.</span>
+              </div>
             </motion.div>
           </motion.div>
         </div>
 
-        <div className="mt-auto mb-48">
+        <div className="mt-auto mb-40">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
