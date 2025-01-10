@@ -27,7 +27,7 @@ export const Hero = () => {
             className="w-full"
           >
             <motion.div className="flex flex-col items-center gap-4">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold gradient-text mb-2">
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold gradient-text mb-2">
                 Jura
               </h1>
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-light tracking-wider mb-4">
