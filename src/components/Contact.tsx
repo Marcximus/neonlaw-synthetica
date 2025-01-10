@@ -36,7 +36,7 @@ export const Contact = () => {
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-6 tracking-tight">Kontakt Mig</h2>
           <p className="text-gray-400 text-sm sm:text-lg">
-            Lad os diskutere hvordan vi kan hjælpe din virksomhed med at nå sine mål.
+            Lad mig vide hvordan jeg kan hjælpe din virksomhed med at nå escape velocity.
           </p>
         </motion.div>
 
