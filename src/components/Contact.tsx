@@ -72,12 +72,30 @@ export const Contact = () => {
                   placeholder="Hvordan kan jeg hjælpe dig?"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyberpunk-purple to-cyberpunk-blue text-white font-medium rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-base"
-              >
-                FIRE
-              </button>
+              <div className="relative overflow-hidden rounded-lg">
+                <div 
+                  className="absolute inset-0 bg-gradient-to-r from-black via-yellow-500/20 to-black"
+                  style={{
+                    backgroundSize: '200% 100%',
+                    animation: 'slide 4s linear infinite',
+                  }}
+                />
+                <motion.button
+                  type="submit"
+                  className="relative z-10 w-full px-6 sm:px-8 py-3 sm:py-4 text-white font-bold tracking-wider text-sm sm:text-base"
+                  whileHover={{ scale: 1.05 }}
+                  animate={{
+                    color: ['#ffffff', '#fbbf24', '#ffffff'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  FIRE
+                </motion.button>
+              </div>
             </form>
           </motion.div>
 
