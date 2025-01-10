@@ -46,9 +46,12 @@ export const About = () => {
           </motion.div>
 
           <motion.div 
-            className="backdrop-blur-2xl bg-white/[0.01] border border-white/[0.03] rounded-xl p-6 sm:p-8 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.02] hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-            whileHover={{ boxShadow: "0 12px 40px 0 rgba(0,0,0,0.2)" }}
-            whileTap={{ scale: 0.99 }}
+            className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] rounded-xl p-6 sm:p-8 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
+            whileHover={{ 
+              boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
+              borderColor: "rgba(255, 255, 255, 0.05)"
+            }}
+            whileTap={{ scale: 0.98 }}
           >
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left mb-6">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
@@ -61,9 +64,12 @@ export const About = () => {
           {/* Specialer and CV grid */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
             <motion.div 
-              className="backdrop-blur-2xl bg-white/[0.01] border border-white/[0.03] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.02] hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-              whileHover={{ boxShadow: "0 12px 40px 0 rgba(0,0,0,0.2)" }}
-              whileTap={{ scale: 0.99 }}
+              className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
+              whileHover={{ 
+                boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
+                borderColor: "rgba(255, 255, 255, 0.05)"
+              }}
+              whileTap={{ scale: 0.98 }}
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
@@ -74,9 +80,12 @@ export const About = () => {
               </ul>
             </motion.div>
             <motion.div 
-              className="backdrop-blur-2xl bg-white/[0.01] border border-white/[0.03] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.02] hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-              whileHover={{ boxShadow: "0 12px 40px 0 rgba(0,0,0,0.2)" }}
-              whileTap={{ scale: 0.99 }}
+              className="backdrop-blur-2xl bg-white/[0.005] border border-white/[0.02] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-white/[0.01] hover:scale-[1.01] active:scale-[0.98] cursor-pointer"
+              whileHover={{ 
+                boxShadow: "0 12px 40px 0 rgba(249, 115, 22, 0.1)",
+                borderColor: "rgba(255, 255, 255, 0.05)"
+              }}
+              whileTap={{ scale: 0.98 }}
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
