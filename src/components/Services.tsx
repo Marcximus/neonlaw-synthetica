@@ -11,7 +11,7 @@ const services = [
     description: (
       <>
         Nogen gange skal det gå rigtig stærk. Den nye verden er præget af søvnløs AI og skarp konkurrence. Derfor er jeg{' '}
-        <span className="text-cyberpunk-blue animate-glow">tilgængelig 24/7</span>
+        <span className="text-cyberpunk-blue animate-pulse">tilgængelig 24/7</span>
         {' '}(også i weekenden).
       </>
     ),
@@ -22,9 +22,9 @@ const services = [
     description: (
       <>
         Selskaber skal i stigende grad finde{' '}
-        <span className="text-cyberpunk-blue animate-glow">fleksible</span>
+        <span className="text-cyberpunk-blue animate-pulse">fleksible</span>
         {' '}
-        <span className="text-cyberpunk-blue animate-glow">løsninger</span>
+        <span className="text-cyberpunk-blue animate-pulse">løsninger</span>
         , og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.
       </>
     ),
@@ -35,7 +35,7 @@ const services = [
     description: (
       <>
         Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid{' '}
-        <span className="text-cyberpunk-blue animate-glow">gratis</span>
+        <span className="text-cyberpunk-blue animate-pulse">gratis</span>
         {' '}at ringe til mig.
       </>
     ),
