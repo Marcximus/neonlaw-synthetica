@@ -22,17 +22,7 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center">
-            Mød{" "}
-            <a 
-              href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyberpunk-blue animate-pulse cursor-pointer hover:opacity-80 transition-opacity"
-            >
-              Marcus
-            </a>
-          </h2>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">Mød Marcus</h2>
           
           {/* Image Container */}
           <motion.div 
