@@ -28,14 +28,12 @@ export const Hero = () => {
             className="max-w-5xl" // Increased from max-w-4xl to max-w-5xl
           >
             <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text mb-4 whitespace-nowrap">
-                Business Jura
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text mb-2 whitespace-nowrap">
+                Jura
               </h1>
-              <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
-                <span>Nemt.</span>
-                <span>Hurtigt.</span>
-                <span>Billigt.</span>
-              </div>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light tracking-wider mb-4">
+                for virksomheder med fart på
+              </h2>
             </motion.div>
           </motion.div>
         </div>
