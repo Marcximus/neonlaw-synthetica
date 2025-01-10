@@ -8,9 +8,9 @@ export const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "LIFT-OFF!",
+      title: "LIFT-OFF! 🚀",
       description: "Din besked er sendt!",
-      duration: 3000,
+      duration: 5000, // Increased duration to 5 seconds
     });
   };
 
