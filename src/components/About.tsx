@@ -54,7 +54,7 @@ export const About = () => {
             >
               <img
                 src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
-                alt="Professional headshot"
+                alt="Marcus Alexander Svendsen - Professional headshot"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
