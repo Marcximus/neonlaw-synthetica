@@ -13,20 +13,26 @@ const services = [
   {
     icon: <Scale className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Kommerciel Tilgang",
-    description: "Selskaber skal i stigende grad finde " + 
-      "fleksible løsninger".split(" ").map((word, i) => 
-        word === "fleksible" || word === "løsninger" ? 
-          <span key={i} className="text-cyberpunk-blue animate-glow">{word} </span> : 
-          word + " "
-      ) + 
-      ", og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.",
+    description: (
+      <>
+        Selskaber skal i stigende grad finde{' '}
+        <span className="text-cyberpunk-blue animate-glow">fleksible</span>
+        {' '}
+        <span className="text-cyberpunk-blue animate-glow">løsninger</span>
+        , og være smidige i deres tankegang. Defor anvender jeg konservativ jura med et moderne mindset.
+      </>
+    ),
   },
   {
     icon: <Briefcase className="w-8 h-8 sm:w-12 sm:h-12" />,
     title: "Markedets Bedste Pris",
-    description: "Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid " +
-      <span className="text-cyberpunk-blue animate-glow">gratis</span> + 
-      " at ringe til mig.",
+    description: (
+      <>
+        Det sidste man gider benytte sit cashflow på, er at betale dyre advokatregninger. Derfor er det altid{' '}
+        <span className="text-cyberpunk-blue animate-glow">gratis</span>
+        {' '}at ringe til mig.
+      </>
+    ),
   },
 ];
 
