@@ -25,10 +25,10 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+            className="max-w-5xl" // Increased from max-w-4xl to max-w-5xl
           >
             <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-              <h1 className="text-6xl sm:text-7xl font-bold gradient-text mb-4 whitespace-nowrap">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text mb-4 whitespace-nowrap">
                 Business Jura
               </h1>
               <div className="text-xl sm:text-3xl text-gray-300 font-light tracking-wider flex flex-wrap justify-center gap-2">
