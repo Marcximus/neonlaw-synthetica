@@ -47,23 +47,26 @@
 
 .subtle-glow {
   text-shadow: 
-    0 0 2px rgba(249, 115, 22, 0.4),
-    0 0 4px rgba(249, 115, 22, 0.2);
-  animation: subtlePulse 2s ease-in-out infinite;
+    0 0 4px rgba(249, 115, 22, 0.8),
+    0 0 8px rgba(249, 115, 22, 0.6),
+    0 0 12px rgba(249, 115, 22, 0.4);
+  animation: intensePulse 2s ease-in-out infinite;
 }
 
-@keyframes subtlePulse {
+@keyframes intensePulse {
   0%, 100% {
     opacity: 1;
     text-shadow: 
-      0 0 2px rgba(249, 115, 22, 0.4),
-      0 0 4px rgba(249, 115, 22, 0.2);
+      0 0 4px rgba(249, 115, 22, 0.8),
+      0 0 8px rgba(249, 115, 22, 0.6),
+      0 0 12px rgba(249, 115, 22, 0.4);
   }
   50% {
-    opacity: 0.95;
+    opacity: 0.85;
     text-shadow: 
-      0 0 3px rgba(249, 115, 22, 0.5),
-      0 0 6px rgba(249, 115, 22, 0.3);
+      0 0 8px rgba(249, 115, 22, 0.9),
+      0 0 16px rgba(249, 115, 22, 0.7),
+      0 0 24px rgba(249, 115, 22, 0.5);
   }
 }
 
