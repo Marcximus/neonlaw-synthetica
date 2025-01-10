@@ -10,7 +10,7 @@ export const Contact = () => {
     toast({
       title: "LIFT-OFF! 🚀",
       description: "Din besked er sendt!",
-      duration: 5000, // Increased duration to 5 seconds
+      duration: 5000,
     });
   };
 
@@ -114,12 +114,14 @@ export const Contact = () => {
               {
                 icon: <Phone className="w-5 h-5 sm:w-6 sm:h-6" />,
                 title: "Telefon",
-                details: "+45 12 34 56 78"
+                details: "+45 28 29 98 63",
+                href: "tel:+4528299863"
               },
               {
                 icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
                 title: "Email",
-                details: "kontakt@neonlaw.dk"
+                details: "ms@corporateconsulting.dk",
+                href: "mailto:ms@corporateconsulting.dk"
               }
             ].map((item, index) => (
               <motion.div
@@ -134,7 +136,16 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm sm:text-base">{item.details}</p>
+                  {item.href ? (
+                    <a 
+                      href={item.href}
+                      className="text-gray-400 text-sm sm:text-base hover:text-white transition-colors"
+                    >
+                      {item.details}
+                    </a>
+                  ) : (
+                    <p className="text-gray-400 text-sm sm:text-base">{item.details}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
