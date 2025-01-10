@@ -53,6 +53,7 @@ export const About = () => {
                   <li>• Advokat fra Accura</li>
                   <li>• Officer i Hæren</li>
                   <li>• Københavns Universitet</li>
+                  <li>• Hong Kong University</li>
                 </ul>
               </div>
             </div>
