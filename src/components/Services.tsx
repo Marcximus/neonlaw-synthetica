@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Rocket, Scale, Briefcase } from "lucide-react";
+import { Rocket, Scale, Briefcase, Building2 } from "lucide-react";
 
 const services = [
   {
@@ -40,6 +40,16 @@ const services = [
       </>
     ),
   },
+  {
+    icon: <Building2 className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12" />,
+    title: "CVR Nummer",
+    description: (
+      <>
+        Corporate Consulting er registreret under CVR nummer{' '}
+        <span className="text-cyberpunk-blue animate-pulse">42041556</span>
+      </>
+    ),
+  },
 ];
 
 export const Services = () => {
@@ -64,7 +74,7 @@ export const Services = () => {
             - forretning før regulering
           </motion.p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
