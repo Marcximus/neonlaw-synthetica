@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { InteractiveBackground } from "./InteractiveBackground";
 
 export const About = () => {
   return (
     <section className="py-16 sm:py-32 relative overflow-hidden">
-      {/* Video Background */}
+      {/* Video Background with optimized playback */}
       <video
         autoPlay
         loop
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-20"
+        style={{ transform: 'translate3d(0,0,0)' }}
       >
         <source src="/rocket.mp4" type="video/mp4" />
       </video>
@@ -20,7 +20,8 @@ export const About = () => {
           className="max-w-[90rem] mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">
             Mød{" "}
@@ -29,36 +30,44 @@ export const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="marcus-glow inline-block hover:scale-105 transition-transform"
+              style={{ willChange: 'transform' }}
             >
               Marcus
             </a>
           </h2>
           
-          {/* Image Container */}
+          {/* Image Container with optimized transforms */}
           <motion.div 
             className="mb-12 backdrop-blur-lg bg-white/5 border border-white/10 p-2 rounded-full max-w-[240px] mx-auto"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            style={{ willChange: 'transform' }}
           >
             <a 
               href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
               target="_blank"
               rel="noopener noreferrer"
               className="block aspect-square rounded-full overflow-hidden transition-transform hover:scale-105"
+              style={{ willChange: 'transform' }}
             >
               <img
                 src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/pictures/IMG_0576.jpg?t=2025-01-09T23%3A03%3A33.731Z"
                 alt="Professional headshot"
                 className="w-full h-full object-cover"
+                loading="eager"
               />
             </a>
           </motion.div>
 
           <motion.div 
-            className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 mb-8 transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-blue/5 active:scale-[0.98] cursor-pointer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 mb-8 transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-blue/5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            style={{ willChange: 'transform' }}
           >
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-justify mb-6">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
@@ -68,12 +77,15 @@ export const About = () => {
             </p>
           </motion.div>
 
-          {/* Specialer and CV grid */}
+          {/* Specialer and CV grid with optimized animations */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
             <motion.div 
-              className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-purple/5 active:scale-[0.98] cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-purple/5"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              style={{ willChange: 'transform' }}
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
@@ -84,9 +96,12 @@ export const About = () => {
               </ul>
             </motion.div>
             <motion.div 
-              className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-blue/5 active:scale-[0.98] cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-cyberpunk-blue/5"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              style={{ willChange: 'transform' }}
             >
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">

@@ -30,7 +30,8 @@ export const Industries = () => {
           className="text-3xl sm:text-5xl font-bold mb-12 sm:mb-16 text-center tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
         >
           Industrier Vi Servicerer
         </motion.h2>
@@ -41,8 +42,10 @@ export const Industries = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
               className="glass p-6 sm:p-8 rounded-xl relative group hover:bg-white/10 transition-all duration-300"
+              style={{ willChange: 'transform' }}
             >
               <div className="mb-4 sm:mb-6 text-cyberpunk-blue group-hover:text-cyberpunk-purple transition-colors duration-300">
                 {industry.icon}
@@ -54,7 +57,9 @@ export const Industries = () => {
                   className="h-full bg-gradient-to-r from-cyberpunk-purple to-cyberpunk-blue rounded-full"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${industry.percentage}%` }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  style={{ willChange: 'transform' }}
                 />
               </div>
               <p className="text-right text-xs sm:text-sm text-gray-400 mt-2">{industry.percentage}%</p>
