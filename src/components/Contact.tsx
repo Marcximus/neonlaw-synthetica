@@ -15,7 +15,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact-section" className="py-16 relative overflow-hidden">
+    <section id="contact-section" className="py-16 sm:py-32 relative overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
