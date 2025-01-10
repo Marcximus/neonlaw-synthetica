@@ -20,7 +20,7 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
-        <div className="flex-1 flex items-center justify-center -mt-20">
+        <div className="flex-1 flex items-center justify-center -mt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="mt-auto mb-32">
+        <div className="mt-auto mb-40">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
