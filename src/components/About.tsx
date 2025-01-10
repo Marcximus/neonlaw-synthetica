@@ -31,15 +31,12 @@ export const About = () => {
           </motion.div>
 
           <div className="glass p-6 sm:p-8 rounded-xl mb-8">
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
-            </p>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              Jeg har dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel jura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener. Jeg yder rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på i morgen.
+            <p className="text-gray-300 leading-relaxed text-sm sm:text-base whitespace-pre-line">
+              {"Slut med vanvittige regninger og sløv respons.\nLad mig håndtere det juridiske, og lad os\nsamen skalere din virksomhed."}
             </p>
           </div>
 
-          {/* Specialer and CV grid moved outside the main card */}
+          {/* Specialer and CV grid */}
           <div className="grid grid-cols-2 gap-6">
             <div className="glass p-6 rounded-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
