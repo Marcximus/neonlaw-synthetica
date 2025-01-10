@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const scrollToContact = () => {
-    const contactSection = document.querySelector('#contact-section');
+    const contactSection = document.getElementById('contact-section');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
 
@@ -26,7 +29,7 @@ export const Navbar = () => {
       />
       <motion.button 
         onClick={scrollToContact}
-        className="relative z-10 text-white font-bold tracking-wider text-sm sm:text-base cursor-pointer"
+        className="relative z-10 text-white font-bold tracking-wider text-sm sm:text-base cursor-pointer w-full h-full"
         whileHover={{ scale: 1.05 }}
         animate={{
           color: ['#ffffff', '#fbbf24', '#ffffff'],
