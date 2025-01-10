@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden mb-6">
       {/* Video Background with optimized playback */}
       <video
         autoPlay

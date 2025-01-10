@@ -34,7 +34,7 @@ const AnimatedValue = ({ value }: { value: string }) => {
 
 export const Statistics = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95">
+    <section className="relative overflow-hidden bg-gradient-to-b from-black/95 via-black to-black/95 mt-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 gap-4 sm:gap-6">
           {[
