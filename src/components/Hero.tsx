@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden">
+    <section 
+      className="min-h-screen flex items-center relative overflow-hidden"
+      aria-label="Introduktion"
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10" />
       
       <div className="absolute inset-0">
@@ -13,14 +16,15 @@ export const Hero = () => {
           playsInline
           className="w-full h-full object-cover will-change-transform"
           style={{ transform: 'translate3d(0,0,0)' }}
+          aria-hidden="true"
         >
           <source src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/videos/Rocket%20Engine.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Din browser understøtter ikke video afspilning.
         </video>
       </div>
       
       <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
-        <div className="flex-1 flex items-start justify-center pt-32">
+        <header className="flex-1 flex items-start justify-center pt-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +43,7 @@ export const Hero = () => {
               </h2>
             </motion.div>
           </motion.div>
-        </div>
+        </header>
 
         <div className="absolute bottom-1/4 left-0 right-0">
           <motion.p 
