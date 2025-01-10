@@ -40,22 +40,22 @@ export const About = () => {
           </div>
 
           {/* Specialer and CV grid moved outside the main card */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="glass p-4 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
-              <ul className="space-y-1 text-xs sm:text-sm text-gray-300">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="glass p-6 rounded-lg">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-300">
                 <li>• M&A og Erhvervsret</li>
                 <li>• Startup Rådgivning</li>
                 <li>• Tech & AI Jura</li>
                 <li>• Venture Capital</li>
               </ul>
             </div>
-            <div className="glass p-4 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-bold mb-2 text-cyberpunk-blue">CV</h3>
-              <ul className="space-y-1 text-xs sm:text-sm text-gray-300">
+            <div className="glass p-6 rounded-lg">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-300">
                 <li>• Advokat fra Accura</li>
                 <li>• Officer i Hæren</li>
-                <li className="text-[11px] sm:text-sm">• Københavns Universitet</li>
+                <li className="text-[10px] sm:text-sm">• Københavns Universitet</li>
                 <li className="text-[11px] sm:text-sm">• Hong Kong University</li>
               </ul>
             </div>
