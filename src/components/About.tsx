@@ -31,7 +31,7 @@ export const About = () => {
           </motion.div>
 
           <div className="glass p-6 sm:p-8 rounded-xl mb-8">
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base whitespace-pre-line">
+            <p className="text-gray-300 leading-relaxed whitespace-pre-line">
               {"Slut med vanvittige regninger og sløv respons.\nLad mig håndtere det juridiske, og lad os\nsamen skalere din virksomhed."}
             </p>
           </div>
