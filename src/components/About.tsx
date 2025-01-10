@@ -45,7 +45,7 @@ export const About = () => {
             </a>
           </motion.div>
 
-          <div className="backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8 mb-8">
+          <div className="backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] rounded-xl p-6 sm:p-8 mb-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]">
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-left mb-6">
               Jeg er en tidligere advokat med solid erfaring inden for M&A, selskabsret og venturejura. Nu hjælper jeg startups og ventureselskaber med at navigere i de juridiske forhold, der følger med vækst og investeringer.
             </p>
@@ -56,7 +56,7 @@ export const About = () => {
 
           {/* Specialer and CV grid */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6 w-full">
-            <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl">
+            <div className="backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-purple">Specialer</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">M&A og Erhvervsret</li>
@@ -65,7 +65,7 @@ export const About = () => {
                 <li className="whitespace-nowrap">Venture Capital</li>
               </ul>
             </div>
-            <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-6 rounded-xl">
+            <div className="backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] p-6 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyberpunk-blue">CV</h3>
               <ul className="space-y-2 text-gray-300 text-[12px] sm:text-sm">
                 <li className="whitespace-nowrap">Advokat fra Accura</li>
