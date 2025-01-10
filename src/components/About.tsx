@@ -38,7 +38,7 @@ export const About = () => {
               Jeg har dedikeret min karriere til at hjælpe innovative virksomheder med at navigere i den digitale tidsalder. Med en dyb forståelse for både traditionel jura og den nye teknologiske virkelighed, bygger jeg bro mellem disse verdener. Jeg yder rådgivning, der ikke bare løser dagens udfordringer, men også forbereder din virksomhed på i morgen.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <div className="glass p-4 rounded-lg">
+              <div className="glass p-4 rounded-lg sm:col-span-1">
                 <h3 className="text-xl font-bold mb-2 text-cyberpunk-purple">Specialer</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• M&A og Erhvervsret</li>
@@ -56,7 +56,7 @@ export const About = () => {
                   <li>• Teknologisk Indsigt</li>
                 </ul>
               </div>
-              <div className="glass p-4 rounded-lg">
+              <div className="glass p-4 rounded-lg sm:col-span-1">
                 <h3 className="text-xl font-bold mb-2 text-cyberpunk-pink">CV</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li>• Advokat fra Accura</li>
