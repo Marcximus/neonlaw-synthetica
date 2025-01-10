@@ -28,7 +28,7 @@ export const Hero = () => {
             className="max-w-5xl"
           >
             <motion.div className="flex flex-col items-center gap-4 px-4 sm:px-0">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text subtle-glow mb-4 whitespace-nowrap [text-shadow:_0_0_30px_rgba(255,255,255,0.7)]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text subtle-glow mb-4 whitespace-normal [text-shadow:_0_0_30px_rgba(255,255,255,0.7)]">
                 Corporate Consulting
               </h1>
             </motion.div>
