@@ -41,7 +41,7 @@ export const Statistics = () => {
             { label: "M&A Deals", value: "200+" },
             { label: "Startup Exits", value: "50+" },
             { label: "IPO's", value: "5" },
-            { label: "Klient Tilfredshed", value: "100%" }
+            { label: "Klienttilfredshed", value: "100%" }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
