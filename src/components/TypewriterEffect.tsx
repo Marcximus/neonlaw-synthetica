@@ -54,7 +54,7 @@ export const TypewriterEffect = () => {
   }, [text, isDeleting, currentIndex]);
 
   return (
-    <span className="relative inline-block min-w-[280px] h-[40px]">
+    <span className="relative inline-flex min-w-[280px] h-[40px] items-center">
       <AnimatePresence mode="wait">
         <motion.span
           key={text}
