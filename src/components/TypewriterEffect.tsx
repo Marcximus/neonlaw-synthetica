@@ -54,17 +54,19 @@ export const TypewriterEffect = () => {
   }, [text, isDeleting, currentIndex]);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.span
-        key={text}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.2 }}
-        className="marcus-glow inline-block"
-      >
-        {text}
-      </motion.span>
-    </AnimatePresence>
+    <span className="relative inline-block min-w-[280px] h-[40px]">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={text}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.15, ease: "easeInOut" }}
+          className="marcus-glow absolute left-0"
+        >
+          {text}
+        </motion.span>
+      </AnimatePresence>
+    </span>
   );
 };
