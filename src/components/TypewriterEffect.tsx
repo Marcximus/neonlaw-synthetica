@@ -24,49 +24,47 @@ export const TypewriterEffect = () => {
   useEffect(() => {
     let timeout: number;
 
-    if (isDeleting) {
-      timeout = window.setTimeout(() => {
-        setText(text.slice(0, -1));
+    const tick = () => {
+      const fullText = titles[currentIndex];
+      
+      if (isDeleting) {
+        // Deleting text
+        setText(prev => prev.slice(0, -1));
         setDelta(50); // Faster when deleting
-      }, delta);
+      } else {
+        // Typing text
+        setText(prev => fullText.slice(0, prev.length + 1));
+        setDelta(150); // Normal typing speed
+      }
 
-      if (text === "") {
+      // Handle state changes
+      if (!isDeleting && text === fullText) {
+        // Finished typing, wait before starting to delete
+        setDelta(2000);
+        setIsDeleting(true);
+      } else if (isDeleting && text === "") {
+        // Finished deleting, move to next word
         setIsDeleting(false);
         setCurrentIndex((prev) => (prev + 1) % titles.length);
-        setDelta(500); // Pause before typing next word
+        setDelta(500);
       }
-    } else {
-      const fullText = titles[currentIndex];
-      if (text !== fullText) {
-        timeout = window.setTimeout(() => {
-          setText(fullText.slice(0, text.length + 1));
-          setDelta(150); // Normal typing speed
-        }, delta);
-      } else {
-        timeout = window.setTimeout(() => {
-          setIsDeleting(true);
-          setDelta(2000); // Pause before deleting
-        }, 2000);
-      }
-    }
+    };
 
+    timeout = window.setTimeout(tick, delta);
     return () => window.clearTimeout(timeout);
-  }, [text, isDeleting, currentIndex]);
+  }, [text, isDeleting, currentIndex, delta]);
 
   return (
-    <div className="inline-block min-w-[280px] h-[40px]">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={text}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.15, ease: "easeInOut" }}
-          className="marcus-glow block"
-        >
-          {text}
-        </motion.span>
-      </AnimatePresence>
+    <div className="inline-flex items-center justify-start min-w-[280px] h-[40px]">
+      <motion.span
+        key={text}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="marcus-glow whitespace-nowrap text-left"
+      >
+        {text}
+        <span className="animate-pulse">|</span>
+      </motion.span>
     </div>
   );
 };
