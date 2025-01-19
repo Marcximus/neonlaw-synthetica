@@ -25,9 +25,9 @@ export const About = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col items-center mb-8">
-            <div className="text-2xl font-bold text-white w-full">
+            <div className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold text-white w-full">
               <div className="flex items-center justify-center">
-                <span className="whitespace-nowrap px-4 translate-y-[-4px] text-center">Mød din</span>
+                <span className="whitespace-nowrap px-2 sm:px-4 text-sm sm:text-xl md:text-2xl lg:text-3xl ml-[25%] sm:ml-[35%] translate-y-[-4px]">Mød din</span>
                 <TypewriterEffect />
               </div>
             </div>
