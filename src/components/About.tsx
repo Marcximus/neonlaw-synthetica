@@ -27,7 +27,7 @@ export const About = () => {
           <div className="flex flex-col items-center mb-8">
             <div className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-white w-full">
               <div className="flex items-center justify-center">
-                <span className="whitespace-nowrap px-2 sm:px-4 translate-y-[0.5px] sm:translate-y-[-4px] ml-[2%] sm:ml-[35%] text-2xl sm:text-2xl md:text-2xl lg:text-3xl">Mød din</span>
+                <span className="whitespace-nowrap px-2 sm:px-4 translate-y-[-1px] sm:translate-y-[-4px] ml-[2%] sm:ml-[35%] text-2xl sm:text-2xl md:text-2xl lg:text-3xl">Mød din</span>
                 <TypewriterEffect />
               </div>
             </div>
