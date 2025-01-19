@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TypewriterEffect } from "./TypewriterEffect";
 
 export const About = () => {
   return (
@@ -24,16 +25,8 @@ export const About = () => {
           transition={{ duration: 0.3 }}
         >
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white">
-            Mød{" "}
-            <a 
-              href="https://www.linkedin.com/in/marcus-alexander-svendsen-624618b9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="marcus-glow inline-block hover:scale-105 transition-transform"
-              style={{ willChange: 'transform' }}
-            >
-              Marcus
-            </a>
+            Mød din{" "}
+            <TypewriterEffect />
           </h2>
           
           {/* Image Container with optimized transforms */}
