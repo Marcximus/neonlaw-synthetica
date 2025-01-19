@@ -52,10 +52,10 @@ export const TypewriterEffect = () => {
   }, [text, isDeleting, currentIndex]);
 
   return (
-    <div className="min-w-[280px] h-[40px] flex items-center">
-      <div className="text-cyberpunk-blue relative whitespace-nowrap">
+    <div className="relative flex-1 min-w-0">
+      <div className="text-cyberpunk-blue whitespace-nowrap overflow-hidden">
         {text}
-        <span className="absolute -right-[4px] top-0 animate-pulse">|</span>
+        <span className="absolute top-0 animate-pulse">|</span>
       </div>
     </div>
   );
