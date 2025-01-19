@@ -25,7 +25,7 @@ export const About = () => {
           transition={{ duration: 0.3 }}
         >
 
-          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white flex items-center justify-center gap-2 flex-wrap">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white flex items-center justify-center gap-2">
             <span className="whitespace-nowrap">Mød din</span>
             <TypewriterEffect />
           </h2>
