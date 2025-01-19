@@ -24,11 +24,12 @@ export const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
         >
-
-          <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-center text-white inline-flex items-center justify-center gap-2 w-full flex-nowrap">
-            <span className="whitespace-nowrap">Mød din</span>
-            <TypewriterEffect />
-          </h2>
+          <div className="flex flex-col items-center mb-8">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white flex items-center gap-2">
+              <span className="whitespace-nowrap">Mød din</span>
+              <TypewriterEffect />
+            </h2>
+          </div>
 
           {/* Image Container with optimized transforms */}
           <motion.div 

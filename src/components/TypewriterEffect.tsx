@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const titles = [
@@ -19,52 +19,50 @@ export const TypewriterEffect = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(150);
 
   useEffect(() => {
-    let timeout: number;
+    let timeout: NodeJS.Timeout;
 
     const tick = () => {
       const fullText = titles[currentIndex];
       
       if (isDeleting) {
-        // Deleting text
+        // Delete one character
         setText(prev => prev.slice(0, -1));
-        setDelta(50); // Faster when deleting
+        timeout = setTimeout(tick, 50); // Fast deletion speed
       } else {
-        // Typing text
+        // Type one character
         setText(prev => fullText.slice(0, prev.length + 1));
-        setDelta(150); // Normal typing speed
+        timeout = setTimeout(tick, 150); // Normal typing speed
       }
 
-      // Handle state changes
+      // Check if we need to switch states
       if (!isDeleting && text === fullText) {
-        // Finished typing, wait before starting to delete
-        setDelta(2000);
-        setIsDeleting(true);
+        // Finished typing, wait before deleting
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+          tick();
+        }, 2000);
       } else if (isDeleting && text === "") {
         // Finished deleting, move to next word
         setIsDeleting(false);
         setCurrentIndex((prev) => (prev + 1) % titles.length);
-        setDelta(500);
+        clearTimeout(timeout);
+        timeout = setTimeout(tick, 500);
       }
     };
 
-    timeout = window.setTimeout(tick, delta);
-    return () => window.clearTimeout(timeout);
-  }, [text, isDeleting, currentIndex, delta]);
+    timeout = setTimeout(tick, 50);
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, currentIndex]);
 
   return (
-    <div className="inline-flex items-center justify-start min-w-[280px] h-[40px]">
-      <motion.span
-        key={text}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="marcus-glow whitespace-nowrap text-left"
-      >
+    <div className="min-w-[280px] h-[40px] flex items-center">
+      <span className="text-cyberpunk-blue relative">
         {text}
-        <span className="animate-pulse">|</span>
-      </motion.span>
+        <span className="absolute -right-[4px] animate-pulse">|</span>
+      </span>
     </div>
   );
 };
