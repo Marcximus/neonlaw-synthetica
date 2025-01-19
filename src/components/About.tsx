@@ -25,10 +25,10 @@ export const About = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col items-center mb-8">
-            <h2 className="text-3xl sm:text-5xl font-bold text-white flex items-center gap-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white flex items-center gap-2">
               <span className="whitespace-nowrap">Mød din</span>
               <TypewriterEffect />
-            </h2>
+            </div>
           </div>
 
           {/* Image Container with optimized transforms */}

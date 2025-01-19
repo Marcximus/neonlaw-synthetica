@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const titles = [
@@ -27,25 +26,20 @@ export const TypewriterEffect = () => {
       const fullText = titles[currentIndex];
       
       if (isDeleting) {
-        // Delete one character
         setText(prev => prev.slice(0, -1));
-        timeout = setTimeout(tick, 50); // Fast deletion speed
+        timeout = setTimeout(tick, 50);
       } else {
-        // Type one character
         setText(prev => fullText.slice(0, prev.length + 1));
-        timeout = setTimeout(tick, 150); // Normal typing speed
+        timeout = setTimeout(tick, 150);
       }
 
-      // Check if we need to switch states
       if (!isDeleting && text === fullText) {
-        // Finished typing, wait before deleting
         clearTimeout(timeout);
         timeout = setTimeout(() => {
           setIsDeleting(true);
           tick();
         }, 2000);
       } else if (isDeleting && text === "") {
-        // Finished deleting, move to next word
         setIsDeleting(false);
         setCurrentIndex((prev) => (prev + 1) % titles.length);
         clearTimeout(timeout);
@@ -59,10 +53,10 @@ export const TypewriterEffect = () => {
 
   return (
     <div className="min-w-[280px] h-[40px] flex items-center">
-      <span className="text-cyberpunk-blue relative">
+      <div className="text-cyberpunk-blue relative whitespace-nowrap">
         {text}
-        <span className="absolute -right-[4px] animate-pulse">|</span>
-      </span>
+        <span className="absolute -right-[4px] top-0 animate-pulse">|</span>
+      </div>
     </div>
   );
 };
