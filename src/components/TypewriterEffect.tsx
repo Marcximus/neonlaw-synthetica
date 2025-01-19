@@ -55,13 +55,13 @@ export const TypewriterEffect = () => {
   const maxLength = Math.max(...titles.map(title => title.length));
 
   return (
-    <div className="relative flex-1 min-w-0 max-w-[70%] sm:max-w-[80%]">
+    <div className="flex-1 min-w-0">
       <div 
         className="text-cyberpunk-blue whitespace-nowrap overflow-hidden"
         style={{ minHeight: '1.5em' }} // Maintain consistent height
       >
         <span className="inline-block min-w-[1ch]">{text}</span>
-        <span className="absolute top-0 animate-pulse">|</span>
+        <span className="absolute animate-pulse">|</span>
       </div>
     </div>
   );
