@@ -12,7 +12,6 @@ export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
   const { toast } = useToast();
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -29,39 +28,11 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      let result;
-      
-      if (isLogin) {
-        // Login flow
-        result = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
-      } else {
-        // Signup flow
-        result = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            emailRedirectTo: window.location.origin,
-            // Disable email confirmation
-            data: {
-              email_confirmed: true,
-            },
-          }
-        });
-        
-        console.log("Sign up result:", result);
-        
-        // If signup was successful, automatically sign in
-        if (!result.error && result.data.user) {
-          // Sign in after successful signup
-          result = await supabase.auth.signInWithPassword({
-            email,
-            password,
-          });
-        }
-      }
+      // Login flow only
+      const result = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
       console.log("Auth result:", result);
 
@@ -71,8 +42,8 @@ export default function Auth() {
 
       if (result.data.user) {
         toast({
-          title: isLogin ? "Successfully logged in" : "Account created",
-          description: isLogin ? "Welcome back!" : "You have been signed up and logged in automatically!",
+          title: "Successfully logged in",
+          description: "Welcome back!",
           variant: "default",
         });
         
@@ -122,7 +93,7 @@ export default function Auth() {
           />
           
           <h2 className="text-3xl font-bold text-center mb-6 relative">
-            {isLogin ? "Login" : "Sign Up"}
+            Login
           </h2>
           
           <form onSubmit={handleAuth} className="space-y-4 relative">
@@ -155,11 +126,6 @@ export default function Auth() {
                 className="bg-black/40 border-white/10"
                 minLength={6}
               />
-              {!isLogin && (
-                <p className="text-xs text-gray-400 mt-1">
-                  Password must be at least 6 characters
-                </p>
-              )}
             </div>
             
             <Button
@@ -167,21 +133,9 @@ export default function Auth() {
               disabled={loading}
               className="w-full bg-cyberpunk-blue hover:bg-cyberpunk-purple transition-colors"
             >
-              {loading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
+              {loading ? "Processing..." : "Login"}
             </Button>
           </form>
-          
-          <div className="mt-4 text-center relative">
-            <button
-              type="button"
-              onClick={() => setIsLogin(!isLogin)}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              {isLogin
-                ? "Don't have an account? Sign up"
-                : "Already have an account? Log in"}
-            </button>
-          </div>
         </div>
       </motion.div>
     </div>
