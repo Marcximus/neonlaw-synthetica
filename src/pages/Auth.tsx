@@ -38,15 +38,32 @@ export default function Auth() {
           password,
         });
       } else {
-        // Signup flow
+        // Signup flow with auto-confirmation
+        // First sign up the user
         result = await supabase.auth.signUp({
           email,
           password,
           options: {
-            // Don't require email verification for now (during development)
             emailRedirectTo: window.location.origin,
+            data: {
+              email_confirmed: true, // Add metadata indicating email is confirmed
+            },
           }
         });
+
+        // If sign up was successful but we need to auto-login
+        if (!result.error && result.data.user) {
+          // Auto sign in after signup
+          const signInResult = await supabase.auth.signInWithPassword({
+            email,
+            password,
+          });
+          
+          // Update result with sign in data if successful
+          if (!signInResult.error) {
+            result = signInResult;
+          }
+        }
       }
 
       console.log("Auth result:", result);
@@ -58,17 +75,9 @@ export default function Auth() {
       if (result.data.user) {
         toast({
           title: isLogin ? "Successfully logged in" : "Account created",
-          description: isLogin ? "Welcome back!" : "You are now signed up and logged in!",
+          description: isLogin ? "Welcome back!" : "You have been signed up and logged in automatically!",
           variant: "default",
         });
-        
-        // For sign up, we can automatically log the user in
-        if (!isLogin) {
-          toast({
-            title: "Account created and logged in",
-            description: "Welcome to the platform!",
-          });
-        }
         
         navigate("/");
       }
