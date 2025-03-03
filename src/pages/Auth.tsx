@@ -38,31 +38,28 @@ export default function Auth() {
           password,
         });
       } else {
-        // Signup flow with auto-confirmation
-        // First sign up the user
+        // Signup flow
         result = await supabase.auth.signUp({
           email,
           password,
           options: {
             emailRedirectTo: window.location.origin,
+            // Disable email confirmation
             data: {
-              email_confirmed: true, // Add metadata indicating email is confirmed
+              email_confirmed: true,
             },
           }
         });
-
-        // If sign up was successful but we need to auto-login
+        
+        console.log("Sign up result:", result);
+        
+        // If signup was successful, automatically sign in
         if (!result.error && result.data.user) {
-          // Auto sign in after signup
-          const signInResult = await supabase.auth.signInWithPassword({
+          // Sign in after successful signup
+          result = await supabase.auth.signInWithPassword({
             email,
             password,
           });
-          
-          // Update result with sign in data if successful
-          if (!signInResult.error) {
-            result = signInResult;
-          }
         }
       }
 
