@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { motion } from "framer-motion";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Auth() {
   const [email, setEmail] = useState("");
@@ -14,6 +15,14 @@ export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);
   const { toast } = useToast();
   const navigate = useNavigate();
+  const { user } = useAuth();
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,16 +32,24 @@ export default function Auth() {
       let result;
       
       if (isLogin) {
+        // Login flow
         result = await supabase.auth.signInWithPassword({
           email,
           password,
         });
       } else {
+        // Signup flow
         result = await supabase.auth.signUp({
           email,
           password,
+          options: {
+            // Don't require email verification for now (during development)
+            emailRedirectTo: window.location.origin,
+          }
         });
       }
+
+      console.log("Auth result:", result);
 
       if (result.error) {
         throw result.error;
@@ -41,18 +58,25 @@ export default function Auth() {
       if (result.data.user) {
         toast({
           title: isLogin ? "Successfully logged in" : "Account created",
-          description: isLogin ? "Welcome back!" : "Check your email to confirm your account",
+          description: isLogin ? "Welcome back!" : "You are now signed up and logged in!",
           variant: "default",
         });
         
-        if (isLogin || !result.data.user.identities?.[0].identity_data?.email_confirmed_at) {
-          navigate("/");
+        // For sign up, we can automatically log the user in
+        if (!isLogin) {
+          toast({
+            title: "Account created and logged in",
+            description: "Welcome to the platform!",
+          });
         }
+        
+        navigate("/");
       }
     } catch (error: any) {
+      console.error("Auth error:", error);
       toast({
-        title: "Error",
-        description: error.message,
+        title: "Authentication Error",
+        description: error.message || "An error occurred during authentication",
         variant: "destructive",
       });
     } finally {
@@ -123,7 +147,13 @@ export default function Auth() {
                 required
                 placeholder="Enter your password"
                 className="bg-black/40 border-white/10"
+                minLength={6}
               />
+              {!isLogin && (
+                <p className="text-xs text-gray-400 mt-1">
+                  Password must be at least 6 characters
+                </p>
+              )}
             </div>
             
             <Button
@@ -131,7 +161,7 @@ export default function Auth() {
               disabled={loading}
               className="w-full bg-cyberpunk-blue hover:bg-cyberpunk-purple transition-colors"
             >
-              {loading ? "Loading..." : isLogin ? "Login" : "Sign Up"}
+              {loading ? "Processing..." : isLogin ? "Login" : "Sign Up"}
             </Button>
           </form>
           
