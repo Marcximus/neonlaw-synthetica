@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -10,20 +9,6 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
-  safelist: [
-    'text-cyberpunk-blue',
-    'text-cyberpunk-purple',
-    'text-cyberpunk-pink',
-    'bg-cyberpunk-blue',
-    'bg-cyberpunk-purple',
-    'bg-cyberpunk-pink',
-    'from-cyberpunk-purple',
-    'to-cyberpunk-blue',
-    'subtle-glow',
-    'white-glow',
-    'marcus-glow',
-    'gradient-text'
-  ],
   theme: {
     container: {
       center: true,
@@ -44,9 +29,9 @@ export default {
         foreground: "hsl(var(--foreground))",
         cyberpunk: {
           black: "#0A0A0F",
-          blue: "#F97316", // Orange
-          purple: "#ea384c", // Red
-          pink: "#D946EF", // Magenta pink
+          blue: "#F97316", // Changed to orange
+          purple: "#ea384c", // Changed to red
+          pink: "#D946EF", // Changed to magenta pink
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

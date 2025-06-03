@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -127,15 +126,5 @@
       0 0 12px rgba(249, 115, 22, 0.6),
       0 0 16px rgba(249, 115, 22, 0.4),
       0 0 20px rgba(249, 115, 22, 0.3);
-  }
-}
-
-/* Add the missing slide animation */
-@keyframes slide {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
   }
 }

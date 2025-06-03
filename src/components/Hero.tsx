@@ -1,9 +1,6 @@
-
 import { motion } from "framer-motion";
 
 export const Hero = () => {
-  console.log("Hero component rendering");
-
   return (
     <section 
       className="min-h-screen flex items-center relative overflow-hidden"
@@ -20,17 +17,10 @@ export const Hero = () => {
           className="w-full h-full object-cover will-change-transform"
           style={{ transform: 'translate3d(0,0,0)' }}
           aria-hidden="true"
-          onError={(e) => {
-            console.error("Video failed to load:", e);
-            // Hide video on error
-            (e.target as HTMLVideoElement).style.display = 'none';
-          }}
         >
           <source src="https://pwdwzfydxdpelbsleobt.supabase.co/storage/v1/object/public/videos/Rocket%20Engine.mp4" type="video/mp4" />
           Din browser understøtter ikke video afspilning.
         </video>
-        {/* Fallback background if video fails */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
       </div>
       
       <div className="container mx-auto px-4 relative z-20 text-center flex flex-col min-h-screen">
@@ -45,11 +35,11 @@ export const Hero = () => {
               className="flex flex-col items-center gap-4"
               style={{ willChange: 'transform' }}
             >
-              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold gradient-text mb-2 will-change-transform text-white">
+              <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold gradient-text mb-2 will-change-transform">
                 Jura
               </h1>
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-light tracking-wider mb-4">
-                for virksomheder med <span className="text-orange-500 subtle-glow">fart</span> på
+                for virksomheder med <span className="text-[#F97316] subtle-glow">fart</span> på
               </h2>
             </motion.div>
           </motion.div>
