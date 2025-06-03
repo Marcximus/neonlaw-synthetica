@@ -1,10 +1,8 @@
 
-import { InteractiveBackground } from "../components/InteractiveBackground";
-
 const Index = () => {
   return (
     <main className="min-h-screen bg-black text-white relative">
-      <InteractiveBackground />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
