@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { LegalServicesMarquee } from "./LegalServicesMarquee";
 
 export const ContactHeader = () => {
   return (
@@ -15,6 +16,8 @@ export const ContactHeader = () => {
         <span className="block lg:inline">virksomhed med at nå escape velocity.</span><br />
         <span className="subtle-glow inline-block text-cyberpunk-blue">Det er 100% gratis.</span>
       </p>
+      
+      <LegalServicesMarquee />
     </motion.div>
   );
 };
