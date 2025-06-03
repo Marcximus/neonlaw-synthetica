@@ -36,20 +36,28 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
         }}
       >
         <span
-          className={`font-medium tracking-tight py-4 m-0 transition-all ${
+          className={`font-medium tracking-tight py-4 m-0 transition-all hover:opacity-80 ${
             textColor ? "" : "text-gray-400"
           }`}
           style={{
             fontSize,
             color: textColor || undefined,
+            '--hover-color': hoverColor || '#F97316',
+          } as React.CSSProperties & { '--hover-color': string }}
+          onMouseEnter={(e) => {
+            if (hoverColor) {
+              e.currentTarget.style.color = hoverColor;
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (textColor) {
+              e.currentTarget.style.color = textColor;
+            } else {
+              e.currentTarget.style.color = '';
+            }
           }}
         >
-          <span className="hoverable-text">{repeatedText}</span>
-          <style jsx>{`
-            .hoverable-text:hover {
-              color: ${hoverColor || "#F97316"};
-            }
-          `}</style>
+          {repeatedText}
         </span>
       </motion.div>
     </main>
