@@ -46,7 +46,7 @@ export const Hero = () => {
           </motion.div>
         </header>
 
-        <div className="absolute bottom-1/4 md:bottom-1/3 lg:bottom-1/4 xl:bottom-1/5 left-0 right-0">
+        <div className="absolute bottom-16 md:bottom-20 lg:bottom-24 xl:bottom-28 left-0 right-0">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
