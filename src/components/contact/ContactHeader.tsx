@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 export const ContactHeader = () => {
@@ -10,8 +11,8 @@ export const ContactHeader = () => {
     >
       <h2 className="text-3xl sm:text-5xl font-bold mb-6 tracking-tight">Kontakt Mig</h2>
       <p className="text-gray-400 text-sm sm:text-lg">
-        Lad mig vide hvordan jeg kan hjælpe din<br />
-        virksomhed med at nå escape velocity.<br />
+        <span className="block lg:inline">Lad mig vide hvordan jeg kan hjælpe din</span>{" "}
+        <span className="block lg:inline">virksomhed med at nå escape velocity.</span><br />
         <span className="subtle-glow inline-block text-cyberpunk-blue">Det er 100% gratis.</span>
       </p>
     </motion.div>
