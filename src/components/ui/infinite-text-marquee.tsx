@@ -23,7 +23,7 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
   const repeatedText = Array(10).fill(text).join(" • ") + " •";
  
   return (
-    <main className="relative w-full overflow-hidden">
+    <div className="relative w-screen overflow-hidden -mx-4 sm:-mx-8 lg:-mx-16">
       <motion.div
         className="whitespace-nowrap"
         animate={{
@@ -60,6 +60,6 @@ export const InfiniteTextMarquee: React.FC<InfiniteTextMarqueeProps> = ({
           {repeatedText}
         </span>
       </motion.div>
-    </main>
+    </div>
   );
 };
