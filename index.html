@@ -12,6 +12,24 @@
       gtag('config', 'AW-17109090836');
     </script>
 
+    <!-- Event snippet for Page view conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17109090836/2NTvCL2A-9IaEJSEoN4_',
+          'value': 1.0,
+          'currency': 'DKK',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/lovable-uploads/509bf25e-83d3-405b-913a-fab94eef9e67.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
