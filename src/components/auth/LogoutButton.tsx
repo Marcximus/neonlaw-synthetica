@@ -15,7 +15,7 @@ export const LogoutButton = () => {
       className="fixed top-4 right-4 z-50"
     >
       <LogOut className="h-4 w-4 mr-2" />
-      Log ud
+      Log out
     </Button>
   );
 };

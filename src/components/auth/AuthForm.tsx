@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
+import { InteractiveBackground } from '@/components/InteractiveBackground';
 
 export const AuthForm = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -26,20 +27,20 @@ export const AuthForm = () => {
 
       if (error) {
         toast({
-          title: "Fejl",
+          title: "Error",
           description: error.message,
           variant: "destructive",
         });
       } else if (isSignUp) {
         toast({
-          title: "Kontrol din e-mail",
-          description: "Vi har sendt dig et bekræftelseslink.",
+          title: "Check your email",
+          description: "We've sent you a confirmation link.",
         });
       }
     } catch (error) {
       toast({
-        title: "Fejl",
-        description: "Der skete en uventet fejl. Prøv igen.",
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -48,27 +49,28 @@ export const AuthForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center p-4 relative">
+      <InteractiveBackground />
+      <Card className="w-full max-w-md relative z-10 bg-background/90 backdrop-blur-sm">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">
-            {isSignUp ? 'Opret konto' : 'Log ind'}
+            {isSignUp ? 'Create Account' : 'Sign In'}
           </CardTitle>
           <CardDescription className="text-center">
             {isSignUp 
-              ? 'Opret en konto for at få adgang til Corporate Consulting'
-              : 'Log ind for at få adgang til Corporate Consulting'
+              ? 'Create an account to access Corporate Consulting'
+              : 'Sign in to access Corporate Consulting'
             }
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">E-mail</Label>
+              <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="din@email.dk"
+                placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -76,7 +78,7 @@ export const AuthForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Adgangskode</Label>
+              <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
                 type="password"
@@ -89,7 +91,7 @@ export const AuthForm = () => {
               />
             </div>
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Vent...' : (isSignUp ? 'Opret konto' : 'Log ind')}
+              {loading ? 'Please wait...' : (isSignUp ? 'Create Account' : 'Sign In')}
             </Button>
           </form>
           <div className="mt-4 text-center">
@@ -100,8 +102,8 @@ export const AuthForm = () => {
               disabled={loading}
             >
               {isSignUp 
-                ? 'Har du allerede en konto? Log ind'
-                : 'Har du ikke en konto? Opret en'
+                ? 'Already have an account? Sign in'
+                : "Don't have an account? Create one"
               }
             </button>
           </div>
